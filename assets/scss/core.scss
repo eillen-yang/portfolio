@@ -1,0 +1,29 @@
+// base
+@import './base/typography';
+
+
+// helpers
+@import './helpers/variables';
+
+
+// layouts
+@import './layouts/footer';
+
+// pages
+
+#wrap {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+#header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+#main {
+	flex: 1 1 auto;
+}
