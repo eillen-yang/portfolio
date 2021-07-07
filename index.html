@@ -9,12 +9,13 @@
 
 	<!-- vendor -->
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 	<!-- fonts -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+
 
 	<!-- css -->
 	<link rel="stylesheet" href="./assets/css/reset.min.css">
@@ -74,9 +75,27 @@
 					<h2 class="title">Project</h2>
 					<div class="swiper-container bigSlide">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide b-slide01"></div>
-							<div class="swiper-slide b-slide02"></div>
-							<div class="swiper-slide b-slide03"></div>
+							<div class="swiper-slide b-slide01">
+								<div class="project-info">
+									<span class="tit">Square</span>
+									<p class="info">티스토리 블로그 스킨입니다. 내용이 길면 말줄임티스토리 블로그 스킨입니다. 내용이 길면 말줄임티스토리 블로그 스킨입니다. 내용이 길면 말줄임티스토리 블로그 스킨입니다. 내용이 길면 말줄임티스토리 블로그 스킨입니다. 내용이 길면 말줄임</p>
+									<a href="https://github.com/yangareum1818" class="icon-link" target="_blank"></a>
+								</div>
+							</div>
+							<div class="swiper-slide b-slide02">
+								<div class="project-info">
+									<span class="tit">Square</span>
+									<p class="info">티스토리 블로그 스킨입니다. 내용이 길면 말줄임티스토리 블로그 스킨입니다. 내용이 길면 말줄임티스토리 블로그 스킨입니다. 내용이 길면 말줄임티스토리 블로그 스킨입니다. 내용이 길면 말줄임티스토리 블로그 스킨입니다. 내용이 길면 말줄임</p>
+									<a href="https://github.com/yangareum1818" class="icon-link" target="_blank"></a>
+								</div>
+							</div>
+							<div class="swiper-slide b-slide03">
+								<div class="project-info">
+									<span class="tit">Square</span>
+									<p class="info">티스토리 블로그 스킨입니다. 내용이 길면 말줄임티스토리 블로그 스킨입니다. 내용이 길면 말줄임티스토리 블로그 스킨입니다. 내용이 길면 말줄임티스토리 블로그 스킨입니다. 내용이 길면 말줄임티스토리 블로그 스킨입니다. 내용이 길면 말줄임</p>
+									<a href="https://github.com/yangareum1818" class="icon-link" target="_blank"></a>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="swiper-container smallSlide">
@@ -85,11 +104,12 @@
 							<div class="swiper-slide s-slide02"></div>
 							<div class="swiper-slide s-slide03"></div>
 						</div>
+						<div class="nextEl"></div>
 					</div>
 				</div>
 			</div>
 
-			<section class="section sec-teams">
+			<div class="section sec-teams">
 				<div class="container">
 					<h2 class="title">Team</h2>
 					<div class="tabs">
@@ -99,35 +119,49 @@
 							<li><a href="#tab03">Back-end Developer</a></li>
 						</ul>
 						<div class="tabs-content">
-							<div class="tab-common"></div>
-							<div class="tab-common"></div>
-							<div class="tab-common"></div>
+							<div class="tab-common tab01 active">
+								<ul class="clearfix">
+
+								</ul>
+							</div>
+							<div class="tab-common tab02">
+								<ul class="clearfix">
+
+								</ul>
+							</div>
+							<div class="tab-common tab03">
+								<ul class="clearfix">
+
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 
-			<section class="section sec-contactus">
+			<div class="section sec-contactus">
 				<div class="container">
 					<div class="contact">
-						<div class="inputInner">
-							<label for="">Company or Your-name</label>
-							<input type="text" placeholder="Company or Your-name">
-						</div>
-						<div class="inputInner">
-							<label for="">Email</label>
-							<input type="email" placeholder="webmamster@example.com">
-						</div>
-						<div class="inputInner">
-							<label for="">Messages</label>
-							<input type="text" placeholder="Please enter your request.">
-						</div>
-						<div class="btnWrap">
-							<a href="javascript:void(0);" class="btn">Send Request</a>
-						</div>
+						<form action="" class="contact-form">
+							<div class="inputInner">
+								<label for="">Company or Your-name</label>
+								<input type="text" name="name" id="name" placeholder="Company or Your-name">
+							</div>
+							<div class="inputInner">
+								<label for="mail">Email</label>
+								<input type="email" name="mail" id="mail" maxlength="30" placeholder="webmamster@example.com">
+							</div>
+							<div class="inputInner">
+								<label for="">Messages</label>
+								<textarea name="msg" id="msg" cols="30" rows="10" placeholder="Please enter your request."></textarea>
+							</div>
+							<div class="btnWrap">
+								<input type="submit" value="Send Request" id="submit" class="btn">
+							</div>
+						</form>
 					</div>
 				</div>
-			</section>
+			</div>
 		</main>
 
 		<footer id="footer">
@@ -152,35 +186,8 @@
 		</footer>
 	</div>
 
-<script>
-	// main slide
-	const mainSlider = new Swiper('.sliderMain', {
-		slidesPerView: 1,
-		speed: 1000,
-		effect: 'fade',
-		fadeEffect: {
-			crossFade: true
-		},
-		autoplay: {
-			delay: 3000,
-		}
-	});
-
-	// Project slide
-	const bigSlide = new Swiper('.bigSlide', {
-		spaceBetween: 10,
-		loop: true,
-		loopedSlides: 2
-	});
-	const smailSlide = new Swiper('.smallSlide', {
-		spaceBetween: 10,
-		slidesPerView: 2.5,
-		loop: true,
-		loopedSlides: 3,
-		thumbs: {
-			swiper: bigSlide
-		}
-	});
-</script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+	<script src="./assets/js/jquery-3.6.0.js"></script>
+	<script src="./assets/js/core.js"></script>
 </body>
 </html>
