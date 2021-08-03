@@ -16,20 +16,37 @@
 	const bigSlide = new Swiper('.bigSlide', {
 		spaceBetween: 10,
 		loop: true,
-		loopedSlides: 2,
+		loopedSlides: 4,
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
 	});
 	const smailSlide = new Swiper('.smallSlide', {
 		spaceBetween: 10,
-		slidesPerView: 2.5,
+		slidesPerView: 4.5,
 		loop: true,
-		loopedSlides: 3,
+		loopedSlides: 5,
 		thumbs: {
 			swiper: bigSlide
 		},
 		navigation: {
 			nextEl: '.nextEl',
+		},
+		breakpoints: {
+			// when window width is >= 320px
+			320: {
+			  slidesPerView: 2,
+			  spaceBetween: 20
+			},
+			// when window width is >= 480px
+			480: {
+			  slidesPerView: 3,
+			  spaceBetween: 30
+			},
+			// when window width is >= 640px
+			1200: {
+			  slidesPerView: 2,
+			  spaceBetween: 10
+			}
 		}
 	});
 
