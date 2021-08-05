@@ -34,18 +34,20 @@
 		breakpoints: {
 			// when window width is >= 320px
 			320: {
-			  slidesPerView: 2,
-			  spaceBetween: 20
+			  slidesPerView: 3.8
+
 			},
 			// when window width is >= 480px
 			480: {
-			  slidesPerView: 3,
-			  spaceBetween: 30
+			  slidesPerView: 4.2
 			},
 			// when window width is >= 640px
-			1200: {
-			  slidesPerView: 2,
-			  spaceBetween: 10
+			640: {
+			  slidesPerView: 3.8
+			},
+			// when window width is >= 640px
+			1280: {
+			  slidesPerView: 4.8
 			}
 		}
 	});
@@ -78,7 +80,7 @@
 			$.ajax({
 				url: 'https://randomuser.me/api/',
 				data: {
-					gender: 'female',
+					gender: '',
 					results: 3
 				},
 				dataType: 'json',
@@ -117,7 +119,7 @@
 			$.ajax({
 				url: 'https://randomuser.me/api/',
 				data: {
-					gender: 'female',
+					gender: 'male',
 					results: 2
 				},
 				dataType: 'json',
@@ -151,6 +153,45 @@
 			});
 		}
 		backend();
+
+		var frontend = function () {
+			$.ajax({
+				url: 'https://randomuser.me/api/',
+				data: {
+					gender: 'female',
+					results: 3
+				},
+				dataType: 'json',
+
+				success: function (data) {
+					var output = '';
+
+					for(var i = 0; i < 3; i++) {
+						var user = data.results[i];
+
+						output += '<li>';
+						output += '<div class="item">';
+						output += '	<div class="item-thumb">';
+						output += '		<img src="'+user.picture.large+'" alt="사용자 이미지">';
+						output += '	</div>';
+						output += ' ';
+						output += '	<div class="item-data">';
+						output += '		<div class="name">'+user.name.first+'</div>';
+						output += '		<div class="tel"><a href="tel:'+ user.phone+'">'+user.phone+'</a></div>';
+						output += '		<div class="email"><a href="mailto:'+ user.email+'">'+ user.email+'</a></div>';
+						output += '		<div class="address">'+ user.location.city+'</div>';
+						output += '	</div>';
+						output += '</div>';
+						output += '</li>';
+
+						console.log(user);
+
+						$('.tab03 ul').html(output);	//랜덤으로 바뀌기
+					}
+				}
+			});
+		}
+		frontend();
 	});
 
 	//contact us
