@@ -164,7 +164,7 @@
 }
 
 .sec-introduce {
-	height: 90vh;
+	height: 80vh;
 	background: #fff;
 
 	.tabs {
@@ -172,7 +172,7 @@
 
 		.tabs-nav {
 			position: absolute;
-			top: -108px;
+			top: -90px;
 			right: 0;
 			font-size: 0;
 
@@ -198,7 +198,7 @@
 
 		.tabs-content {
 			min-width: 800px;
-			min-height: 500px;
+			min-height: 410px;
 			background: #ffffff;
 			font-size: 16px;
 			border-radius: 3px;
@@ -227,6 +227,92 @@
 							width: 100%;
 							height: 100%;
 							object-fit: cover;
+						}
+					}
+
+					.mybox-item {
+						padding-top: 25px;
+						font-size: 0;
+
+						.intro-item {
+							display: inline-block;
+							vertical-align: middle;
+
+							&.name {
+								width: 15%;
+							}
+
+							&.email {
+								width: 30%;
+							}
+
+							&.phone {
+								width: 20%;
+							}
+							&.address {
+								width: 35%;
+							}
+
+							.intro-tit {
+								color: #63489a;
+								font-size: 16px;
+								font-weight: 500;
+							}
+
+							.intro-cont {
+								padding-top: 10px;
+								font-size: 14px;
+								font-weight: 400;
+							}
+						}
+					}
+
+					.mybox-icon {
+						padding-top: 30px;
+						display: flex;
+
+						.intro-icon {
+							position: relative;
+							display: flex;
+							justify-content: center;
+							padding-top: 10%;
+							width: 25%;
+							color: #555;
+							font-size: 16px;
+							font-weight: 500;
+
+							&.intro-icon::before {
+								content: '';
+								display: block;
+								position: absolute;
+								top: 10px;
+								width: 60px;
+								height:60px;
+							}
+
+							&.icon1::before {
+								background: url(/assets/images/icon/icon-github.png) no-repeat 50% 50%;
+								background-size: cover;
+							}
+
+							&.icon2::before {
+								background: url(/assets/images/icon/icon-api.png) no-repeat 50% 50%;
+								background-size: cover;
+							}
+
+							&.icon3::before {
+								background: url(/assets/images/icon/icon-personal-work.png) no-repeat 50% 50%;
+								background-size: cover;
+							}
+
+							&.icon4::before {
+								background: url(/assets/images/icon/icon-study.png) no-repeat 50% 50%;
+								background-size: cover;
+							}
+
+							&:hover {
+								box-shadow: 1px 1px 3px #63489a;
+							}
 						}
 					}
 				}
