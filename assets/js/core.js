@@ -34,12 +34,12 @@
 		breakpoints: {
 			// when window width is >= 320px
 			320: {
-			  slidesPerView: 3.8
+			  slidesPerView: 2.2
 
 			},
 			// when window width is >= 480px
 			480: {
-			  slidesPerView: 4.2
+			  slidesPerView: 2.5
 			},
 			// when window width is >= 640px
 			640: {
@@ -94,14 +94,17 @@
 						output += '<li>';
 						output += '<div class="item">';
 						output += '	<div class="item-thumb">';
-						output += '		<img src="'+user.picture.large+'" alt="사용자 이미지">';
+						output += '		<img src="'+user.picture.large+'" alt="user images">';
 						output += '	</div>';
 						output += ' ';
 						output += '	<div class="item-data">';
 						output += '		<div class="name">'+user.name.first+'</div>';
-						output += '		<div class="tel"><a href="tel:'+ user.phone+'">'+user.phone+'</a></div>';
-						output += '		<div class="email"><a href="mailto:'+ user.email+'">'+ user.email+'</a></div>';
-						output += '		<div class="address">'+ user.location.city+'</div>';
+						output += ' 	<div class="gender"> '+user.gender+' </div>';
+						output += ' 	<div class="item-icon">';
+						output += '			<div class="email"><a href="mailto:'+ user.email +'"><i class="far fa-envelope"></i></a></div>';
+						output += '			<div class="tel"><a href="tel:'+ user.phone +'"><i class="fas fa-phone"></i></a></div>';
+						output += '			<div class="city"><a href="javascript:void(0)"><i class="fas fa-map-marker-alt"></i></a></div>';
+						output += '		</div>';
 						output += '	</div>';
 						output += '</div>';
 						output += '</li>';
@@ -133,14 +136,17 @@
 						output += '<li>';
 						output += '<div class="item">';
 						output += '	<div class="item-thumb">';
-						output += '		<img src="'+user.picture.large+'" alt="사용자 이미지">';
+						output += '		<img src="'+user.picture.large+'" alt="user images">';
 						output += '	</div>';
 						output += ' ';
 						output += '	<div class="item-data">';
 						output += '		<div class="name">'+user.name.first+'</div>';
-						output += '		<div class="tel"><a href="tel:'+ user.phone+'">'+user.phone+'</a></div>';
-						output += '		<div class="email"><a href="mailto:'+ user.email+'">'+ user.email+'</a></div>';
-						output += '		<div class="address">'+ user.location.city+'</div>';
+						output += ' 	<div class="gender"> '+user.gender+' </div>';
+						output += ' 	<div class="item-icon">';
+						output += '			<div class="email"><a href="mailto:'+ user.email +'"><i class="far fa-envelope"></i></a></div>';
+						output += '			<div class="tel"><a href="tel:'+ user.phone +'"><i class="fas fa-phone"></i></a></div>';
+						output += '			<div class="city"><a href="city: '+user.city+'"><i class="fas fa-map-marker-alt"></i></a></div>';
+						output += '		</div>';
 						output += '	</div>';
 						output += '</div>';
 						output += '</li>';
@@ -172,14 +178,17 @@
 						output += '<li>';
 						output += '<div class="item">';
 						output += '	<div class="item-thumb">';
-						output += '		<img src="'+user.picture.large+'" alt="사용자 이미지">';
+						output += '		<img src="'+user.picture.large+'" alt="user images">';
 						output += '	</div>';
 						output += ' ';
 						output += '	<div class="item-data">';
 						output += '		<div class="name">'+user.name.first+'</div>';
-						output += '		<div class="tel"><a href="tel:'+ user.phone+'">'+user.phone+'</a></div>';
-						output += '		<div class="email"><a href="mailto:'+ user.email+'">'+ user.email+'</a></div>';
-						output += '		<div class="address">'+ user.location.city+'</div>';
+						output += ' 	<div class="gender"> '+user.gender+' </div>';
+						output += ' 	<div class="item-icon">';
+						output += '			<div class="email"><a href="mailto:'+ user.email +'"><i class="far fa-envelope"></i></a></div>';
+						output += '			<div class="tel"><a href="tel:'+ user.phone +'"><i class="fas fa-phone"></i></a></div>';
+						output += '			<div class="city"><a href="city: '+user.city+'"><i class="fas fa-map-marker-alt"></i></a></div>';
+						output += '		</div>';
 						output += '	</div>';
 						output += '</div>';
 						output += '</li>';
