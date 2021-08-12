@@ -100,10 +100,22 @@
 									</div>
 								</div>
 								<div class="mybox-icon">
-									<a href="https://github.com/yangareum1818" class="intro-icon icon1">Github</a>
-									<a href="http://mufin.dev.wallel.com/yar/api-03.html" class="intro-icon icon2">API</a>
-									<a href="http://mm2800.dothome.co.kr/portfolio/port/index3.html" class="intro-icon icon3">personal work</a>
-									<a href="http://mm2800.dothome.co.kr/" class="intro-icon icon4">Dothome</a>
+									<a href="https://github.com/yangareum1818" class="intro-icon icon1" target="_blank">
+										<img src="./assets/images/icon/icon-github.png" alt="github">
+										<span>Github</span>
+									</a>
+									<a href="http://mufin.dev.wallel.com/yar/api-03.html" class="intro-icon icon2" target="_blank">
+										<img src="./assets/images/icon/icon-api.png" alt="api">
+										<span>API</span>
+									</a>
+									<a href="http://mm2800.dothome.co.kr/portfolio/port/index3.html" class="intro-icon icon3" target="_blank">
+										<img src="./assets/images/icon/icon-personal-work.png" alt="personal work">
+										<span>personal work</span>
+									</a>
+									<a href="http://mm2800.dothome.co.kr/" class="intro-icon icon4" target="_blank">
+										<img src="./assets/images/icon/icon-study.png" alt="study">
+										<span>Dothome</span>
+									</a>
 								</div>
 							</div>
 							<div class="tab-common tab02">zxcv</div>
@@ -202,22 +214,25 @@
 			<div class="section sec-contactus">
 				<div class="container">
 					<div class="contact">
-						<form action="" class="contact-form">
-							<div class="inputInner">
-								<label for="">Company or Your-name</label>
-								<input type="text" name="name" id="name" placeholder="Company or Your-name">
-							</div>
-							<div class="inputInner">
-								<label for="mail">Email</label>
-								<input type="email" name="mail" id="mail" maxlength="30" placeholder="webmamster@example.com">
-							</div>
-							<div class="inputInner">
-								<label for="">Messages</label>
-								<textarea name="msg" id="msg" cols="30" rows="10" placeholder="Please enter your request."></textarea>
-							</div>
-							<div class="btnWrap">
-								<input type="submit" value="Send Request" id="submit" class="btn">
-							</div>
+						<form class="form" onsubmit="return sendRequest(this);">
+							<fieldset>
+								<legend class="blind">구인 제한</legend>
+								<div class="inputInner">
+									<label for="username">Company or Your-name</label>
+									<input type="text" name="name" id="name" placeholder="당신의 회사 또는 이름을 적어주세요.">
+								</div>
+								<div class="inputInner">
+									<label for="mail">Email</label>
+									<input type="email" name="mail" id="mail" maxlength="30" placeholder="이메일 형식을 준수해 적어주세요.">
+								</div>
+								<div class="inputInner">
+									<label for="message">Messages</label>
+									<textarea name="message" id="message" cols="30" rows="10" placeholder="저에게 전할 메세지를 보내주세요."></textarea>
+								</div>
+								<div class="send_btn">
+									<button type="submit">Send Request <i class="far fa-paper-plane"></i></button>
+								</div>
+							</fieldset>
 						</form>
 					</div>
 				</div>

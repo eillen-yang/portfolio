@@ -204,6 +204,38 @@
 	});
 
 	//contact us
+	window.sendRequest = function(form) {
+		const username = form.username;
+		const email = form.email;
+		const message = form.message;
+
+		if ( username.value == '' ) {
+			alert('Company or Your-name is required.');
+			username.focus();
+
+			return false;
+		}
+
+		if ( email.value == '' ) {
+			alert('Email is required.');
+			email.focus();
+
+			return false;
+		}
+
+		if ( message.value == '' ) {
+			alert('Message is required.');
+			message.focus();
+
+			return false;
+		}
+
+		message.value = message.value.replace('\n', '%0D%0A');
+		window.open('mailto:yangareum0130@gmail.com?subject=[구인 제안ː] Request Project&body=Company or Your-name: ' + username.value + '%0D%0AEmail: ' + email.value + '%0D%0AMessage: ' + message.value);
+
+		return false;
+	}
+
 	function checkAll() {
 		if (!checkName(form.name.value)) {
 			return false;

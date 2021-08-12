@@ -164,7 +164,7 @@
 }
 
 .sec-introduce {
-	height: 80vh;
+	height: 90vh;
 	background: #fff;
 
 	.tabs {
@@ -198,11 +198,11 @@
 
 		.tabs-content {
 			min-width: 800px;
-			min-height: 410px;
+			min-height: 420px;
 			background: #ffffff;
 			font-size: 16px;
 			border-radius: 3px;
-			box-shadow: 1px 2px 4px #63489a;
+			box-shadow: 0px 1px 2px #63489a;
 
 			.tab-common {
 				display: none;
@@ -270,48 +270,31 @@
 					.mybox-icon {
 						padding-top: 30px;
 						display: flex;
+						justify-content: center;
 
 						.intro-icon {
-							position: relative;
 							display: flex;
-							justify-content: center;
-							padding-top: 10%;
+							flex-direction: column;
+							align-items: center;
+							padding: 10px 0;
 							width: 25%;
-							color: #555;
-							font-size: 16px;
-							font-weight: 500;
-
-							&.intro-icon::before {
-								content: '';
-								display: block;
-								position: absolute;
-								top: 10px;
-								width: 60px;
-								height:60px;
-							}
-
-							&.icon1::before {
-								background: url(/assets/images/icon/icon-github.png) no-repeat 50% 50%;
-								background-size: cover;
-							}
-
-							&.icon2::before {
-								background: url(/assets/images/icon/icon-api.png) no-repeat 50% 50%;
-								background-size: cover;
-							}
-
-							&.icon3::before {
-								background: url(/assets/images/icon/icon-personal-work.png) no-repeat 50% 50%;
-								background-size: cover;
-							}
-
-							&.icon4::before {
-								background: url(/assets/images/icon/icon-study.png) no-repeat 50% 50%;
-								background-size: cover;
-							}
 
 							&:hover {
 								box-shadow: 1px 1px 3px #63489a;
+							}
+
+							img {
+								display: block;
+								width: 60px;
+								height: 60px;
+							}
+
+							span {
+								display: block;
+								margin-top: 8px;
+								color: #555;
+								font-size: 15px;
+								font-weight: 500;
 							}
 						}
 					}
@@ -624,7 +607,7 @@
 		width: 100%;
 		background: url(../images/sec-contact-vector.jpg) no-repeat 0 50%;
 
-		.contact-form {
+		.form {
 
 			.inputInner {
 				padding-bottom: 30px;
@@ -647,8 +630,8 @@
 					border: 1px solid #ddd;
 				}
 
-				.error-msg {
-					display: none;
+				&[type=text]:focus {
+					border: 1px solid #63490a;
 				}
 
 				textarea {
@@ -662,11 +645,11 @@
 				}
 			}
 
-			.btnWrap {
+			.send_btn {
 				padding-top: 10px;
 				text-align: right;
 
-				.btn {
+				button {
 					display: inline-block;
 					min-width: 200px;
 					height: 48px;
@@ -674,7 +657,7 @@
 					background: #63489a;
 					color: #fff;
 					font-size: 13px;
-					font-weight: 300;
+					font-weight: 500;
 					letter-spacing: 2px;
 					text-align: center;
 				}
