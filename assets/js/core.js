@@ -1,4 +1,4 @@
-
+$(document).ready(function () {
 	// main slide
 	const mainSlider = new Swiper('.sliderMain', {
 		slidesPerView: 1,
@@ -75,7 +75,6 @@
 		});
 	});
 
-	$(document).ready(function () {
 		var designer = function () {
 			$.ajax({
 				url: 'https://randomuser.me/api/',
@@ -201,14 +200,15 @@
 			});
 		}
 		frontend();
-	});
 
 	//contact us
 	window.sendRequest = function(form) {
+		// form 데이터 가져오기
 		const username = form.username;
 		const email = form.email;
 		const message = form.message;
 
+		// 유효성 검사
 		if ( username.value == '' ) {
 			alert('Company or Your-name is required.');
 			username.focus();
@@ -230,44 +230,11 @@
 			return false;
 		}
 
+		// 메일보내기
 		message.value = message.value.replace('\n', '%0D%0A');
-		window.open('mailto:yangareum0130@gmail.com?subject=[구인 제안ː] Request Project&body=Company or Your-name: ' + username.value + '%0D%0AEmail: ' + email.value + '%0D%0AMessage: ' + message.value);
+		window.open('mailto:yangareum0130@gmail.com?subject=[구인 제안] Request Project&body=Company or Your-name:' + username.value + '%0D%0AEmail: ' + email.value + '%0D%0AMessage: ' + message.value);
 
 		return false;
 	}
+});
 
-	function checkAll() {
-		if (!checkName(form.name.value)) {
-			return false;
-		} else if (!checkMail(form.mail.value)) {
-            return false;
-        } else if  (!checkMsg(form.msg.value)) {
-           	return false;
-        }
-        return true;
-    }
-
-	function checkExistData(value, dataName) {
-		if (value == "") {
-			alert(dataName + " 입력해주세요");
-			return false;
-		}
-		return true;
-	}
-
-	function checkMail(email) {
-        //mail이 입력되었는지 확인하기
-        if (!checkExistData(email, "이메일을"))
-            return false;
-        var emailRegExp = /^[A-Za-z0-9_]+[A-Za-z0-9]*[@]{1}[A-Za-z0-9]+[A-Za-z0-9]*[.]{1}[A-Za-z]{1,3}$/;
-        if (!emailRegExp.test(email)) {
-            alert("이메일 형식이 올바르지 않습니다");
-            form.email.value = "";
-            form.email.focus();
-            return false;
-        }
-
-		console.log(email);
-        return true; //확인이 완료되었을 때
-
-    }
