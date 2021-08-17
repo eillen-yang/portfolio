@@ -21,7 +21,7 @@ $(document).ready(function () {
 		watchSlidesProgress: true,
 	});
 	const smailSlide = new Swiper('.smallSlide', {
-		spaceBetween: 10,
+		spaceBetween: 5,
 		slidesPerView: 4.5,
 		loop: true,
 		loopedSlides: 5,
@@ -35,7 +35,6 @@ $(document).ready(function () {
 			// when window width is >= 320px
 			320: {
 			  slidesPerView: 2.2
-
 			},
 			// when window width is >= 480px
 			480: {

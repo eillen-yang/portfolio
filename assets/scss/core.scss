@@ -201,8 +201,8 @@
 			min-height: 420px;
 			background: #ffffff;
 			font-size: 16px;
-			border-radius: 3px;
-			box-shadow: 0px 1px 2px #63489a;
+			border-radius: 15px 15px 0 0;
+			box-shadow: 0px -3px 3px #63489a;
 
 			.tab-common {
 				display: none;
@@ -313,31 +313,31 @@
 
 		.swiper-slide {
 			padding-top: 160px;
-			width: 160px;
+			min-width: 160px;
 			height: 0;
 
 			&.s-slide01 {
-				background: url(../images/sec-project01.jpg) no-repeat 50% 50%;
+				background: url(../images/thumbnail/thumbnail01.png) no-repeat 50% 0%;
 				background-size: cover;
 			}
 
 			&.s-slide02 {
-				background: url(../images/sec-project02.jpg) no-repeat 50% 50%;
+				background: url(../images/thumbnail/thumbnail02.png) no-repeat 50% 0%;
 				background-size: cover;
 			}
 
 			&.s-slide03 {
-				background: url(../images/sec-project03.jpg) no-repeat 50% 50%;
+				background: url(../images/thumbnail/thumbnail03.jpg) no-repeat 50% 0%;
 				background-size: cover;
 			}
 
 			&.s-slide04 {
-				background: url(../images/sec-project03.jpg) no-repeat 50% 50%;
+				background: url(../images/thumbnail/thumbnail04.jpg) no-repeat 50% 0%;
 				background-size: cover;
 			}
 
 			&.s-slide05 {
-				background: url(../images/sec-project03.jpg) no-repeat 50% 50%;
+				background: url(../images/thumbnail/thumbnail05.png) no-repeat 50% 0%;
 				background-size: cover;
 			}
 		}
@@ -362,53 +362,51 @@
 
 	.bigSlide {
 		display: inline-block;
-		margin-top: 70px;
-		width: 400px;
-		height: 320px;
+		margin-top: 40px;
+		width: 100%;
 		vertical-align: middle;
 
 		.swiper-slide {
-			position: relative;
+			display: flex;
+			justify-content: center;
 			width: 100%;
 			height: 100%;
 
-			&.b-slide01 {
-				background: url(../images/sec-project01.jpg) no-repeat 50% 50%;
-				background-size: contain;
-			}
+			.b-slide {
+				padding-top: 400px;
+				width: 400px;
+				height: 0;
 
-			&.b-slide02 {
-				background: url(../images/sec-project02.jpg) no-repeat 50% 50%;
-				background-size: contain;
-			}
+				&.b-slidImg01 {
+					background: url(../images/thumbnail/thumbnail01.png) no-repeat 50% 50%;
+					background-size: contain;
+				}
 
-			&.b-slide03 {
-				background: url(../images/sec-project03.jpg) no-repeat 50% 50%;
-				background-size: contain;
-			}
+				&.b-slidImg02 {
+					background: url(../images/thumbnail/thumbnail02.png) no-repeat 50% 50%;
+					background-size: contain;
+				}
 
-			&.b-slide04 {
-				background: url(../images/sec-project03.jpg) no-repeat 50% 50%;
-				background-size: contain;
-			}
+				&.b-slidImg03 {
+					background: url(../images/thumbnail/thumbnail03.jpg) no-repeat 50% 50%;
+					background-size: contain;
+				}
 
-			&.b-slide05 {
-				background: url(../images/sec-project03.jpg) no-repeat 50% 50%;
-				background-size: contain;
-			}
+				&.b-slidImg04 {
+					background: url(../images/thumbnail/thumbnail04.jpg) no-repeat 50% 50%;
+					background-size: contain;
+				}
 
-			&:hover .project-info {
-				display: block;
+				&.b-slidImg05 {
+					background: url(../images/thumbnail/thumbnail05.png) no-repeat 50% 50%;
+					background-size: contain;
+				}
 			}
 
 			.project-info {
-				display: none;
 				padding: 22px 30px;
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				width: 100%;
-				height: 100px;
+				margin-left: 40px;
+				width: 560px;
 				background: rgba(0, 0, 0, .5);
 
 				.tit {
