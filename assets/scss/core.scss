@@ -30,6 +30,7 @@
 	width: 100%;
 	height: 100px;
 	z-index: 3;
+	transition: all .25s;
 
 	.title {
 		float: left;
@@ -63,6 +64,40 @@
 			}
 			&:last-child {
 				padding-right: 0;
+			}
+		}
+	}
+
+	&[data-header-theme="dark"] {
+		.title {
+			color: #555;
+		}
+		.nav {
+			.navList {
+				a {
+					color: #555;
+				}
+			}
+		}
+	}
+
+	&.fixed {
+		height: 70px;
+		color: #000;
+		background: rgba(255, 255, 255, .9);
+		box-shadow: 0 0 10px #000;
+
+		.title {
+			padding: 20px 0;
+			color: #555;
+		}
+
+		.nav {
+			.navList {
+				a {
+					padding: 23px 0;
+					color: #555;
+				}
 			}
 		}
 	}
@@ -164,7 +199,7 @@
 }
 
 .sec-introduce {
-	height: 90vh;
+	height: 80vh;
 	background: #fff;
 
 	.tabs {
@@ -199,10 +234,8 @@
 		.tabs-content {
 			min-width: 800px;
 			min-height: 420px;
-			background: #ffffff;
+			background: #f5f2ff;
 			font-size: 16px;
-			border-radius: 15px 15px 0 0;
-			box-shadow: 0px -3px 3px #63489a;
 
 			.tab-common {
 				display: none;
@@ -220,7 +253,7 @@
 						height: 120px;
 						border-radius: 50%;
 						overflow: hidden;
-						box-shadow: 1px 2px 4px #f1f1f1;
+						box-shadow: 1px 2px 4px #63489a;
 
 						img {
 							display: block;
@@ -231,36 +264,25 @@
 					}
 
 					.mybox-item {
+						display: flex;
+						justify-content: center;
 						padding-top: 25px;
-						font-size: 0;
 
 						.intro-item {
-							display: inline-block;
-							vertical-align: middle;
-
-							&.name {
-								width: 15%;
-							}
-
-							&.email {
-								width: 30%;
-							}
-
-							&.phone {
-								width: 20%;
-							}
-							&.address {
-								width: 35%;
-							}
+							display: flex;
+							flex: 1 auto;
+							flex-direction: column;
+							align-items: center;
 
 							.intro-tit {
-								color: #63489a;
+								color: #555;
 								font-size: 16px;
 								font-weight: 500;
 							}
 
 							.intro-cont {
 								padding-top: 10px;
+								color: #555;
 								font-size: 14px;
 								font-weight: 400;
 							}
@@ -281,6 +303,7 @@
 
 							&:hover {
 								box-shadow: 1px 1px 3px #63489a;
+								border-radius: 15px;
 							}
 
 							img {
@@ -305,16 +328,32 @@
 }
 
 .sec-project {
-	font-size: 0;
 
 	.smallSlide {
-		display: block;
 		width: 90vw;
 
 		.swiper-slide {
-			padding-top: 160px;
-			min-width: 160px;
+			padding-top: 140px;
+			min-width: 140px;
 			height: 0;
+			border-radius: 30px 30px 0 0;
+
+			&:not(.swiper-slide-active)::before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.7);
+				border-radius: 30px 30px 0 0;
+				cursor: pointer;
+			}
+
+			&::before {
+				display: none;
+			}
 
 			&.s-slide01 {
 				background: url(../images/thumbnail/thumbnail01.png) no-repeat 50% 0%;
@@ -361,14 +400,13 @@
 	}
 
 	.bigSlide {
-		display: inline-block;
 		margin-top: 40px;
 		width: 100%;
 		vertical-align: middle;
 
 		.swiper-slide {
 			display: flex;
-			justify-content: center;
+			align-items: center;
 			width: 100%;
 			height: 100%;
 

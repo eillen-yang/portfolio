@@ -28,9 +28,10 @@
 				<h1 class="title">Eille</h1>
 
 				<ul class="nav">
-					<li class="navList"><a href="javascript:void(0);">Project</a></li>
-					<li class="navList"><a href="javascript:void(0);">Team</a></li>
-					<li class="navList"><a href="javascript:void(0);">Contact Us</a></li>
+					<li class="navList"><a href="#introduce">Introduce</a></li>
+					<li class="navList"><a href="#project">Project</a></li>
+					<li class="navList"><a href="#teams">Team</a></li>
+					<li class="navList"><a href="#contactus">Contact Us</a></li>
 				</ul>
 			</div>
 		</header>
@@ -39,7 +40,7 @@
 			<div class="sec-slider">
 				<div class="swiper-container sliderMain">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide">
+						<div class="swiper-slide" data-header-theme="light">
 							<div class="container">
 								<div class="slideCont">
 									<h3 class="title">Portfolio</h3>
@@ -48,7 +49,7 @@
 							</div>
 						</div>
 
-						<div class="swiper-slide">
+						<div class="swiper-slide" data-header-theme="light">
 							<div class="container">
 								<div class="slideCont">
 									<h2 class="intro">PROGRAMMING</h2>
@@ -56,7 +57,7 @@
 							</div>
 						</div>
 
-						<div class="swiper-slide">
+						<div class="swiper-slide" data-header-theme="dark">
 							<div class="container">
 								<div class="slideCont photo3">
 									<h3 class="title">Lorem Ipsum</h3>
@@ -68,7 +69,7 @@
 				</div>
 			</div>
 
-			<div class="section sec-introduce">
+			<div id="sec-introduce" class="section sec-introduce">
 				<div class="container">
 					<h2 class="title">Introduce</h2>
 					<div class="tabs">
@@ -124,7 +125,7 @@
 				</div>
 			</div>
 
-			<div class="section sec-project">
+			<div id="sec-project" class="section sec-project">
 				<div class="container">
 					<h2 class="title">Project</h2>
 					<div class="swiper-container">
@@ -188,7 +189,7 @@
 				</div>
 			</div>
 
-			<div class="section sec-teams">
+			<div id="sec-teams" class="section sec-teams">
 				<div class="container">
 					<h2 class="title">Team : randem <a href="https://randomuser.me/api/" class="purple" target="_blank">[api]</a></h2>
 					<div class="tabs">
@@ -218,7 +219,7 @@
 				</div>
 			</div>
 
-			<div class="section sec-contactus">
+			<div id="sec-contactus" class="section sec-contactus">
 				<div class="container">
 					<div class="contact">
 						<form class="form" onsubmit="return sendRequest(this);">

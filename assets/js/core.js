@@ -1,4 +1,64 @@
 $(document).ready(function () {
+	// Header
+	const header = {
+		elm: document.querySelector('#header'),
+		theme: '',
+		sliderEvent: function (slider) {
+			// 슬라이더 init, slideChange 이벤트에 따른 액션
+			const t = this;
+
+			let activeSlider = slider.slides[ slider.activeIndex ];
+			let getHeaderTheme = activeSlider.dataset.headerTheme;
+
+			t.theme = getHeaderTheme;
+
+			if ( ! t.elm.classList.contains('fixed')) {
+				t.elm.setAttribute('data-header-theme', t.theme);
+			}
+		},
+
+		scrollEvent: function () {
+			// 스크롤 위치에 따라 header에 fixed 추가
+			const t = this;
+
+			if ( window.scrollY > 150 ) {
+				t.elm.classList.add('fixed');
+			} else {
+				t.elm.classList.remove('fixed');
+
+				// fixed 풀렸을 때, 슬라이더 변화에 맞게 헤더 테마 변경
+				if ( t.theme != '' ) {
+					t.elm.setAttribute('data-header-theme', t.theme);
+				}
+			}
+		},
+
+		anchor: function (target) {
+			// gnb 메뉴 클릭 시 anchor 이동
+			target = target.replace('#', '#sec-');
+			$('html, body').animate({
+				scrollTop: $(target).offset().top
+			}, 500);
+		}
+	}
+
+	// header scroll
+	header.scrollEvent();
+	window.addEventListener('scroll', function (e) {
+		header.scrollEvent();
+	});
+
+	// header navigation
+	var header_link = document.querySelectorAll('#header .nav a');
+	header_link.forEach(function (elm, idx) {
+		elm.addEventListener('click', function(e) {
+			e.preventDefault();
+
+			const target = this.getAttribute('href');
+			header.anchor(target);
+		});
+	});
+
 	// main slide
 	const mainSlider = new Swiper('.sliderMain', {
 		slidesPerView: 1,
@@ -9,6 +69,16 @@ $(document).ready(function () {
 		},
 		autoplay: {
 			delay: 3000,
+		},
+		on: {
+			init: function (swiper) {
+				header.sliderEvent(swiper);
+				console.log(header);
+			},
+			slideChange: function (swiper) {
+				header.sliderEvent(swiper);
+				console.log(header);
+			}
 		}
 	});
 
@@ -22,7 +92,7 @@ $(document).ready(function () {
 	});
 	const smailSlide = new Swiper('.smallSlide', {
 		spaceBetween: 5,
-		slidesPerView: 4.5,
+		slidesPerView: 'auto',
 		loop: true,
 		loopedSlides: 5,
 		thumbs: {
@@ -46,7 +116,7 @@ $(document).ready(function () {
 			},
 			// when window width is >= 640px
 			1280: {
-			  slidesPerView: 4.8
+			  slidesPerView: 4.5
 			}
 		}
 	});
