@@ -42,35 +42,38 @@
 					<div class="swiper-wrapper">
 						<div class="swiper-slide" data-header-theme="light">
 							<div class="container">
-								<div class="slideCont">
-									<!-- <h3 class="title">Portfolio</h3>
-									<p class="info">HTML, JavaScript, SASS 등 Front-end 개발 연습하기 위해 퍼블리싱 했습니다.</p> -->
+								<div class="slideCont sec01">
 								</div>
 							</div>
 						</div>
 
 						<div class="swiper-slide" data-header-theme="light">
 							<div class="container">
-								<div class="slideCont">
-									<!-- <h2 class="intro">PROGRAMMING</h2> -->
+								<div class="slideCont sec02">
+									<div class="sentence_L">
+										<span class="sect-subtitle"><strong>Front-end</strong>Developer</span>
+										<span class="sect-title01">양아름</span>
+										<span class="sect-title02">입니다.</span>
+									</div>
+									<div class="sentence_R">
+										<p class="sent-intro">실무경험을 토대로 많이 사용하는 기능들을<br>적용시켰습니다.</p>
+										<span class="sent-text">HTML5, CSS3, SCSS, jquery, javascript, API</span>
+									</div>
 								</div>
 							</div>
 						</div>
 
 						<div class="swiper-slide" data-header-theme="light">
 							<div class="container">
-								<div class="slideCont"></div>
-							</div>
-						</div>
-
-						<div class="swiper-slide" data-header-theme="dark">
-							<div class="container">
-								<div class="slideCont photo3">
-									<h3 class="title">Lorem Ipsum</h3>
-									<p class="pho-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, maecenas aliquet penatibus nunc et in quam. Faucibus facilisis libero elit enim leo congue posuere.</p>
+								<div class="slideCont sec03">
+									<span class="pointText01">#가보자고</span>
+									<span class="pointText02">#해보자고</span>
+									<span class="pointText03">#즐기자고</span>
 								</div>
 							</div>
 						</div>
+
+						<div class="swiper-slide" data-header-theme="dark"></div>
 					</div>
 				</div>
 			</div>
@@ -86,26 +89,30 @@
 						<div class="tabs-content">
 							<div class="tab-common tab01 active">
 								<div class="myBox">
-									<img src="./assets/images/my_photo.jpg" alt="my_photo">
+									<img src="./assets/images/my_photo.jpg" class="myPhoto" alt="my_photo">
+
+									<div class="mybox-item">
+										<div class="intro-item name">
+											<span class="intro-tit">이름</span>
+											<p class="intro-cont">양아름</p>
+										</div>
+										<div class="intro-item email">
+											<span class="intro-tit">이메일</span>
+											<p class="intro-cont">yangareum0130@gmail.com</p>
+										</div>
+										<div class="intro-item phone">
+											<span class="intro-tit">휴대폰 번호</span>
+											<p class="intro-cont">010-7663-2800</p>
+										</div>
+										<div class="intro-item address">
+											<span class="intro-tit">거주지</span>
+											<p class="intro-cont">경기도 성남 (8호선 단대오거리 5분거리)</p>
+										</div>
+									</div>
 								</div>
-								<div class="mybox-item">
-									<div class="intro-item name">
-										<span class="intro-tit">이름</span>
-										<p class="intro-cont">양아름</p>
-									</div>
-									<div class="intro-item email">
-										<span class="intro-tit">이메일</span>
-										<p class="intro-cont">yangareum0130@gmail.com</p>
-									</div>
-									<div class="intro-item phone">
-										<span class="intro-tit">휴대폰 번호</span>
-										<p class="intro-cont">010-7663-2800</p>
-									</div>
-									<div class="intro-item address">
-										<span class="intro-tit">거주지</span>
-										<p class="intro-cont">경기도 성남 (8호선 단대오거리 5분거리)</p>
-									</div>
-								</div>
+
+								<p class="mybox-desc">&#8251; 아이콘을 클릭하면 연결된 링크로 이동 됩니다.</p>
+
 								<div class="mybox-icon">
 									<a href="https://github.com/yangareum1818" class="intro-icon icon1" target="_blank">
 										<img src="./assets/images/icon/icon-github.png" alt="github">
@@ -228,6 +235,9 @@
 			<div id="sec-contactus" class="section sec-contactus">
 				<div class="container">
 					<div class="contact">
+						<div class="contact-vector">
+							<img src="/assets/images/sec-contact-vector.png" alt="">
+						</div>
 						<form class="form" onsubmit="return sendRequest(this);">
 							<fieldset>
 								<legend class="blind">구인 제한</legend>

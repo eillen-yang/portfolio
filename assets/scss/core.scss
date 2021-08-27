@@ -129,7 +129,7 @@
 		justify-content: center;
 		flex-direction: column;
 		width: 100%;
-		height: 80vh;
+		height: 85vh;
 
 		&:first-child {
 			background: url(../images/sec-slider01.png) no-repeat 50% 50%;
@@ -141,69 +141,23 @@
 			background-size: cover;
 		}
 		&:nth-child(3) {
-			background: /*linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),*/ url(../images/sec-slider03.png) no-repeat 50% 50%;
+			background: url(../images/sec-slider03.png) no-repeat 50% 50%;
 			background-size: cover;
 		}
 
 		&:last-child {
-			background: #fff;
+			background: url(../images/sec-slider04.png) no-repeat 50% 50%;
+			background-size: cover;
 		}
 
 		.slideCont {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			width: 100%;
-			text-align: left;
-			height: 70vh;
-
-			&.photo3 {
-				width: 100%;
-				padding-left: 50%;
-				background: url(../images/sec-slider03-vector.jpg) no-repeat 10% 50%;
-				background-size: 500px;
-
-				.title {
-					color: #000;
-					font-size: 36px;
-					font-weight: 100;
-					letter-spacing: 20px;
-				}
-
-				.pho-intro {
-					font-size: 18px;
-					font-weight: 100;
-					letter-spacing: 2px;
-				}
-			}
-
-			.title {
-				padding-bottom: 20px;
-				color: #fff;
-				font-size: 36px;
-				font-weight: 300;
-				letter-spacing: 10px;
-			}
-
-			.info {
-				color: #fff;
-				font-size: 24px;
-				font-weight: 100;
-			}
-
-			.intro {
-				color: #fff;
-				font-size: 72px;
-				font-weight: 100;
-				letter-spacing: 30px;
-			}
 
 		}
 	}
 }
 
 .sec-introduce {
-	height: 80vh;
+	height: 90vh;
 	background: #fff;
 
 	.tabs {
@@ -218,15 +172,23 @@
 			li {
 				display: inline-block;
 				min-width: 120px;
-				height: 48px;
-				line-height: 48px;
+				height: 50px;
+				line-height: 50px;
 				text-align: center;
 
 				a {
 					display: block;
-					background: #63489a;
-					color: #fff;
+					color: #8069b2;
+					border-radius: 15px 0 15px 0;
+					border: 1px solid #ddd;
 					font-size: 16px;
+					transition: all .25s;
+
+					&.active, &:hover {
+						color: #fff;
+						background: #8069b2;
+						border: 1px solid #fff;
+					}
 				}
 
 				&:last-child {
@@ -237,13 +199,13 @@
 
 		.tabs-content {
 			min-width: 800px;
-			min-height: 420px;
-			background: #f5f2ff;
-			font-size: 16px;
+			min-height: 500px;
+			background: #fff;
+			border: 1px solid #ddd;
 
 			.tab-common {
 				display: none;
-				padding: 40px;
+				padding: 44px;
 
 				&.active {
 					display: block;
@@ -252,48 +214,47 @@
 				&.tab01 {
 
 					.myBox {
-						margin: 0 auto;
-						width: 120px;
-						height: 120px;
-						border-radius: 50%;
-						overflow: hidden;
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						justify-content: space-around;
 
-						img {
-							display: block;
-							width: 100%;
-							height: 100%;
+						.myPhoto {
+							width: 120px;
+							height: 120px;
 							object-fit: cover;
+							border-radius: 50%;
+							overflow: hidden;
+						}
+
+						.mybox-item {
+
+							.intro-item {
+								padding-top: 10px;
+
+								.intro-tit {
+									color: #8069b2;
+									font-size: 16px;
+									font-weight: 500;
+								}
+
+								.intro-cont {
+									color: #555;
+									font-size: 14px;
+									font-weight: 400;
+								}
+							}
 						}
 					}
 
-					.mybox-item {
-						display: flex;
-						justify-content: center;
-						padding-top: 25px;
-
-						.intro-item {
-							display: flex;
-							flex: 1 auto;
-							flex-direction: column;
-							align-items: center;
-
-							.intro-tit {
-								color: #555;
-								font-size: 16px;
-								font-weight: 500;
-							}
-
-							.intro-cont {
-								padding-top: 10px;
-								color: #555;
-								font-size: 14px;
-								font-weight: 400;
-							}
-						}
+					.mybox-desc {
+						padding-top: 10px;
+						color: #63489a;
+						font-size: 12px;
 					}
 
 					.mybox-icon {
-						padding-top: 30px;
+						padding-top: 50px;
 						display: flex;
 						justify-content: center;
 
@@ -305,7 +266,7 @@
 							width: 25%;
 
 							&:hover {
-								box-shadow: 1px 1px 3px #63489a;
+								box-shadow: 1px 1px 3px #ddd;
 								border-radius: 15px;
 							}
 
@@ -317,7 +278,7 @@
 
 							span {
 								display: block;
-								margin-top: 8px;
+								margin-top: 10px;
 								color: #555;
 								font-size: 15px;
 								font-weight: 500;
@@ -331,6 +292,7 @@
 }
 
 .sec-project {
+	display: none;
 
 	.smallSlide {
 		width: 90vw;
@@ -642,11 +604,17 @@
 	height: 70vh;
 
 	.contact {
-		padding-left: 500px;
-		width: 100%;
-		background: url(../images/sec-contact-vector.jpg) no-repeat 0 50%;
+		display: flex;
+		align-items: center;
+
+		.contact-vector {
+			width: 50%;
+		}
 
 		.form {
+			display: flex;
+			justify-content: space-around;
+			width: 50%;
 
 			.inputInner {
 				padding-bottom: 30px;

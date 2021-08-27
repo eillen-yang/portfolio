@@ -67,9 +67,9 @@ $(document).ready(function () {
 		fadeEffect: {
 			crossFade: true
 		},
-		autoplay: {
-			delay: 3000,
-		},
+		// autoplay: {
+		// 	delay: 3000,
+		// },
 		on: {
 			init: function (swiper) {
 				header.sliderEvent(swiper);
