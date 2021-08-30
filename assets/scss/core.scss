@@ -401,9 +401,9 @@
 .sec-project {
 
 	.smallSlide {
-		width: 90vw;
 
 		.swiper-slide {
+			display: flex;
 			padding-top: 140px;
 			min-width: 140px;
 			height: 0;
