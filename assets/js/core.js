@@ -83,20 +83,22 @@ $(document).ready(function () {
 	});
 
 	// Project slide
-	const bigSlide = new Swiper('.bigSlide', {
+	const contentSlide = new Swiper('.contentSlide .swiper-container', {
 		spaceBetween: 10,
 		loop: true,
 		loopedSlides: 4,
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
+		allowTouchMove: false,
 	});
-	const smailSlide = new Swiper('.smallSlide', {
+
+	const thumbnailImg = new Swiper('.thumbnailImg .swiper-container', {
 		spaceBetween: 5,
 		slidesPerView: 'auto',
 		loop: true,
-		loopedSlides: 5,
+		loopedSlides: 4,
 		thumbs: {
-			swiper: bigSlide
+			swiper: contentSlide
 		},
 		navigation: {
 			nextEl: '.nextEl',
@@ -111,15 +113,16 @@ $(document).ready(function () {
 			  slidesPerView: 2.5
 			},
 			// when window width is >= 640px
-			640: {
-			  slidesPerView: 3.8
+			768: {
+			  slidesPerView: 3.2
 			},
-			// when window width is >= 640px
-			1280: {
-			  slidesPerView: 4.5
+			// when window width is >= 1280px
+			1024: {
+			  slidesPerView: 3.8
 			}
 		}
 	});
+
 
 	// tem
 	$('.tabs').each(function (index, element) {

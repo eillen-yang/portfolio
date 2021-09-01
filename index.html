@@ -3,7 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=1440, initial-scale=1.0">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+	<!-- <meta name="viewport" content="width=1440, initial-scale=1.0"> -->
+	<!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
+
 
 	<title>Eille Portfolio</title>
 
@@ -41,41 +44,47 @@
 				<div class="swiper-container sliderMain">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide" data-header-theme="light">
-							<div class="slideCont sec01">
-								<div class="sec01-left">
-									<div class="sec01-img">
-										<img src="/assets/images/sec-slider01-vetor.png" alt="banner-myimg">
+							<div class="container">
+								<div class="slideCont sec01">
+									<div class="sec01-left">
+										<div class="sec01-img">
+											<img src="/assets/images/sec-slider01-vetor.png" alt="banner-myimg">
+										</div>
+										<p class="sec01-text">PORT<br>FOLIO</p>
 									</div>
-									<p class="sec01-text">PORT<br>FOLIO</p>
-								</div>
-								<div class="sec01-right">
-									<p class="sec01-intro">HELLO I AM<br>FRONT-END DEVELOPER.</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="swiper-slide" data-header-theme="light">
-							<div class="slideCont sec02">
-								<div class="sec02-left">
-									<span class="sect-subtitle">
-										<strong>Front-end</strong>
-										Developer
-									</span>
-									<span class="sect-title01">양아름</span>
-									<span class="sect-title02">입니다.</span>
-								</div>
-								<div class="sec02-right">
-									<p class="sent-intro">실무경험을 토대로 많이 사용하는 기능들을 적용시켰습니다.</p>
-									<span class="sent-text">HTML5, CSS3, SCSS, jquery, javascript, API</span>
+									<div class="sec01-right">
+										<p class="sec01-intro">HELLO I AM<br>FRONT-END DEVELOPER.</p>
+									</div>
 								</div>
 							</div>
 						</div>
 
 						<div class="swiper-slide" data-header-theme="light">
-							<div class="slideCont sec03">
-								<span class="pointText">#가보자고</span>
-								<span class="pointText">#해보자고</span>
-								<span class="pointText">#즐기자고</span>
+							<div class="container">
+								<div class="slideCont sec02">
+									<div class="sec02-left">
+										<span class="sect-subtitle">
+											<strong>Front-end</strong>
+											Developer
+										</span>
+										<span class="sect-title01">양아름</span>
+										<span class="sect-title02">입니다.</span>
+									</div>
+									<div class="sec02-right">
+										<p class="sent-intro">실무경험을 토대로 많이 사용하는 기능들을 적용시켰습니다.</p>
+										<span class="sent-text">HTML5, CSS3, SCSS, jquery, javascript, API</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide" data-header-theme="light">
+							<div class="container">
+								<div class="slideCont sec03">
+									<span class="pointText">#가보자고</span>
+									<span class="pointText">#해보자고</span>
+									<span class="pointText">#즐기자고</span>
+								</div>
 							</div>
 						</div>
 
@@ -147,8 +156,8 @@
 			<article id="sec-project" class="sec sec-project">
 				<div class="container">
 					<h2 class="title">Project</h2>
-					<div class="swiper-container">
-						<div class="smallSlide">
+					<div class="thumbnailImg">
+						<div class="swiper-container">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide s-slide01"></div>
 								<div class="swiper-slide s-slide02"></div>
@@ -156,26 +165,36 @@
 								<div class="swiper-slide s-slide04"></div>
 								<div class="swiper-slide s-slide05"></div>
 							</div>
-							<div class="nextEl"></div>
 						</div>
+						<div class="nextEl"></div>
 					</div>
-					<div class="swiper-container">
-						<div class="bigSlide">
+					<div class="contentSlide">
+						<div class="swiper-container">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<div class="b-slide b-slidImg01"></div>
 									<div class="project-info">
-										<span class="tit">Square</span>
-										<p class="info">티스토리 블로그 스킨입니다. 내용이 길면 말줄임티스토리 블로그 스킨입니다. 내용이 길면 말줄임티스토리 블로그 스킨입니다. 내용이 길면 말줄임티스토리 블로그 스킨입니다. 내용이 길면 말줄임티스토리 블로그 스킨입니다. 내용이 길면 말줄임</p>
-										<a href="https://github.com/yangareum1818" class="icon-link" target="_blank"></a>
+										<span class="tit">Piece <strong>(3人)</strong></span>
+										<span class="data">2021. 01. ~ 2021. 03</span>
+										<p class="text">작업 페이지 : 고객지원, 문의하기, 회원가입, 마이페이지(예치금관리)</p>
+										<p class="info">P2P Site : 현물의 상승세를 경험하는 내 생애 첫 번째 조각투자 플랫폼 'PIECE'</p>
+										<div class="buttonInner">
+											<a href="./assets/images/pdf/pdf01.png" class="img-open" target="_blank">pdf Img</a>
+											<a href="https://piece.la/" class="icon-link" target="_blank">홈페이지 이동</a>
+										</div>
 									</div>
 								</div>
 								<div class="swiper-slide">
 									<div class="b-slide b-slidImg02"></div>
 									<div class="project-info">
-										<span class="tit">Square</span>
-										<p class="info">티스토리 블로그 스킨입니다. 내용이 길면 말줄임티스토리 블로그 스킨입니다. 내용이 길면 말줄임티스토리 블로그 스킨입니다. 내용이 길면 말줄임티스토리 블로그 스킨입니다. 내용이 길면 말줄임티스토리 블로그 스킨입니다. 내용이 길면 말줄임</p>
-										<a href="https://github.com/yangareum1818" class="icon-link" target="_blank"></a>
+										<span class="tit">한국이용사회중앙회 <strong>(2人)</strong></span>
+										<span class="data">2021. 04</span>
+										<p class="text">작업 페이지 : 로그인, 회원가입, 고객센터( 공지사항 자료실 문의게시판 이용가이드), 내강의실( 수료증 발급, 회원정보수정 )</p>
+										<p class="info">일반 사이트 : 고령인들이 이용업소의 취업을 위해 필요한 정보, 강의, 자격증 등을 이용할 수 있도록 만들어진 사이트입니다.</p>
+										<div class="buttonInner">
+											<a href="./assets/images/pdf/pdf01.png" class="img-open" target="_blank">PDF Img</a>
+											<a href="https://kbcabarber.or.kr/" class="icon-link" target="_blank">홈페이지 이동</a>
+										</div>
 									</div>
 								</div>
 								<div class="swiper-slide">
