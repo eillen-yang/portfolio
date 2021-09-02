@@ -73,11 +73,11 @@ $(document).ready(function () {
 		on: {
 			init: function (swiper) {
 				header.sliderEvent(swiper);
-				console.log(header);
+				// console.log(header);
 			},
 			slideChange: function (swiper) {
 				header.sliderEvent(swiper);
-				console.log(header);
+				// console.log(header);
 			}
 		}
 	});
@@ -97,6 +97,9 @@ $(document).ready(function () {
 		slidesPerView: 'auto',
 		loop: true,
 		loopedSlides: 4,
+		allowTouchMove: false,
+		slideToClickedSlide: true,
+		grabCursor: true,
 		thumbs: {
 			swiper: contentSlide
 		},
@@ -106,7 +109,7 @@ $(document).ready(function () {
 		breakpoints: {
 			// when window width is >= 320px
 			320: {
-			  slidesPerView: 2.2
+			  slidesPerView: 1.2
 			},
 			// when window width is >= 480px
 			480: {
@@ -142,7 +145,7 @@ $(document).ready(function () {
 				content.find('.tab-common').removeClass('active');
 				content.find('.' + target).addClass('active');
 
-				console.log(target);
+				// console.log(target);
 			}
 		});
 	});
@@ -180,7 +183,7 @@ $(document).ready(function () {
 						output += '</div>';
 						output += '</li>';
 
-						console.log(user);
+						// console.log(user);
 
 						$('.tab01 ul').html(output);	//랜덤으로 바뀌기
 					}
@@ -222,7 +225,7 @@ $(document).ready(function () {
 						output += '</div>';
 						output += '</li>';
 
-						console.log(user);
+						// console.log(user);
 
 						$('.tab02 ul').html(output);	//랜덤으로 바뀌기
 					}
@@ -264,7 +267,7 @@ $(document).ready(function () {
 						output += '</div>';
 						output += '</li>';
 
-						console.log(user);
+						// console.log(user);
 
 						$('.tab03 ul').html(output);	//랜덤으로 바뀌기
 					}
