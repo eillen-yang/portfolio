@@ -363,9 +363,23 @@
 							align-items: center;
 							padding: 45px 0;
 							margin-right: 15px;
-							width: calc(25% - 15px);
+							width: calc(25% - 11px);
 							border: 1px solid #ddd;
 							border-radius: 15px;
+
+							img {
+								display: block;
+								width: 55px;
+								height: 55px;
+							}
+
+							p {
+								display: none;
+								color: #555;
+								font-size: 15px;
+								font-weight: 500;
+								transition: all .25s;
+							}
 
 							&:last-child {
 								margin-right: 0;
@@ -382,7 +396,7 @@
 									position: absolute;
 									top: 0%;
 									left: 0%;
-									padding: 0 10px;
+									padding: 0 12px;
 									width: 100%;
 									height: 100%;
 									color: #ddd;
@@ -392,25 +406,11 @@
 									text-align: center;
 								}
 							}
-
-							img {
-								display: block;
-								width: 60px;
-								height: 60px;
-							}
-
-							p {
-								display: none;
-								color: #555;
-								font-size: 15px;
-								font-weight: 500;
-								transition: all .25s;
-							}
 						}
 					}
 
 					.mybox-desc {
-						padding-top: 10px;
+						padding-top: 14px;
 						color: #63489a;
 						font-size: 13px;
 						font-weight: 700;
@@ -605,28 +605,28 @@
 
 .sec-teams {
 	height: 80vh;
-	background: #fff;
+	background: #aaa;
 
 	.tabs {
 		font-size: 0;
 
 		.tabs-nav {
-			display: inline-block;
-			margin: 0;
-			padding: 0;
-			vertical-align: top;
+			display: flex;
+			justify-content: center;
 
 			li {
+				margin-right: 30px;
 				min-width: 240px;
-				height: 100px;
+				height: 80px;
 
 				a {
 					display: block;
-					padding: 40px 30px;
+					padding: 30px 0;
 					color: #fff;
 					background: #8069b2;
 					font-size: 14px;
 					font-weight: 400;
+					text-align: center;
 
 					&.active {
 						background: #f9f9f9;
@@ -638,12 +638,16 @@
 						font-weight: 500;
 					}
 				}
+
+				&:last-child {
+					margin-right: 0;
+				}
 			}
 		}
 
 		.tabs-content {
 			display: inline-block;
-			width: calc(100% - 240px);
+			width: 100%;
 			background: #f9f9f9;
 			font-size: 14px;
 			vertical-align: top;
