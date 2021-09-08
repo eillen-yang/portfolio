@@ -4,9 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
-	<!-- <meta name="viewport" content="width=1440, initial-scale=1.0"> -->
 	<!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
-
 
 	<title>Eille Portfolio</title>
 
@@ -20,7 +18,7 @@
 	<!-- fonts -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap">
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 </head>
 
@@ -48,7 +46,7 @@
 								<div class="slideCont sec01">
 									<div class="sec01-left">
 										<div class="sec01-img">
-											<img src="/assets/images/sec-slider01-vetor.png" alt="banner-myimg">
+											<img src="./assets/images/sec-slider01-vetor.png" alt="banner-myimg">
 										</div>
 										<p class="sec01-text">PORT<br>FOLIO</p>
 									</div>
@@ -126,26 +124,26 @@
 									</div>
 								</div>
 
-								<p class="mybox-desc">&#8251; 아이콘을 클릭하면 연결된 링크로 이동 됩니다.</p>
-
 								<div class="mybox-icon">
 									<a href="https://github.com/yangareum1818" class="intro-icon icon1" target="_blank">
 										<img src="./assets/images/icon/icon-github.png" alt="github">
-										<span>Github</span>
+										<p>Github</p>
 									</a>
 									<a href="http://mufin.dev.wallel.com/yar/api-03.html" class="intro-icon icon2" target="_blank">
 										<img src="./assets/images/icon/icon-api.png" alt="api">
-										<span>API</span>
+										<p>Naver API를 이용하여 서버에서 받은 데이터를 기반으로 쇼핑검색기능을 만들었습니다.</p>
 									</a>
 									<a href="http://mm2800.dothome.co.kr/portfolio/port/index3.html" class="intro-icon icon3" target="_blank">
 										<img src="./assets/images/icon/icon-personal-work.png" alt="personal work">
-										<span>personal work</span>
+										<p>personal work</p>
 									</a>
 									<a href="http://mm2800.dothome.co.kr/" class="intro-icon icon4" target="_blank">
 										<img src="./assets/images/icon/icon-study.png" alt="study">
-										<span>Dothome</span>
+										<p>Dothome</p>
 									</a>
 								</div>
+
+								<p class="mybox-desc">&#8251; 아이콘을 클릭하면 연결된 링크로 이동 됩니다.</p>
 							</div>
 							<div class="tab-common tab02">zxcv</div>
 						</div>
@@ -274,8 +272,8 @@
 											<span class="desc">웹 에이전시 사이트입니다.</span>
 										</div>
 										<div class="buttonInner">
-											<a href="./assets/images/pdf/pdf01.png" class="img-open" target="_blank">IMG DOWNLOAD</a>
-											<a href="https://online-voting.13100m.net/" class="icon-link" target="_blank">홈페이지 이동</a>
+											<a href="./assets/images/luilab.zip" class="img-open" download="luilab-design">DOWNLOAD</a>
+											<a href="https://luilab.kr" class="icon-link" target="_blank">홈페이지 이동</a>
 										</div>
 									</div>
 								</div>
@@ -315,7 +313,7 @@
 
 			<article id="sec-teams" class="sec sec-teams">
 				<div class="container" style="width: 100%;">
-					<h2 class="title">Team : randem <a href="https://randomuser.me/api/" class="purple" target="_blank">[api]</a></h2>
+					<h2 class="title">Team : random <a href="https://randomuser.me/api/" class="purple" target="_blank">[api]</a></h2>
 					<div class="tabs">
 						<ul class="tabs-nav">
 							<li><a href="#tab01" class="active">Designer</a></li>
@@ -347,7 +345,7 @@
 				<div class="container">
 					<div class="contact">
 						<div class="contact-vector">
-							<img src="/assets/images/sec-contact-vector.png" alt="">
+							<img src="./assets/images/sec-contact-vector.png" alt="contact-vector-img">
 						</div>
 						<form class="form" onsubmit="return sendRequest(this);">
 							<fieldset>
@@ -376,22 +374,30 @@
 
 		<footer id="footer">
 			<div class="container">
-				<div class="row">
-					<div class="col-12">
-
-						<div class="copyright">ⓒ 2021 <strong>Areum Yang</strong></div>
-
-						<div class="thanks">
-							<a href="https://jquery.com" target="_blank">jQuery</a>
-							<a href="https://swiperjs.com" target="_blank">Swiper</a>
-							<a href="https://fontawesome.com" target="_blank">Font Awesome 5</a>
-							<a href="https://randomuser.me/" target="_blank">Random User Generator</a>
-							<a href="https://unsplash.com/" target="_blank">Unsplash</a>
-							<a href="https://www.vecteezy.com/free-vector/website" target="_blank">Website Vectors by Vecteezy</a>
-						</div>
-
+				<div class="thanks">
+					<div class="thanks-inner">
+						<span class="thanks-title">Img</span>
+						<a href="https://kr.freepik.com/" target="_blank">Freepik</a>
+					</div>
+					<div class="thanks-inner">
+						<span class="thanks-title">Script</span>
+						<a href="https://jquery.com" target="_blank">jQuery</a>
+						<a href="https://swiperjs.com" target="_blank">Swiper</a>
+					</div>
+					<div class="thanks-inner">
+						<span class="thanks-title">Icon</span>
+						<a href="https://fontawesome.com" target="_blank">Font Awesome5</a>
+						<a href="https://www.flaticon.com/kr" target="_blank">Flaticon</a>
+					</div>
+					<div class="thanks-inner">
+						<span class="thanks-title">API</span>
+						<a href="https://randomuser.me/" target="_blank">Random User Generator</a>
+						<a href="https://developers.naver.com/docs/common/openapiguide/" target="_blank">Naver Developers</a>
 					</div>
 				</div>
+
+				<div class="copyright">ⓒ 2021 <strong>Areum Yang</strong></div>
+
 			</div>
 		</footer>
 	</div>
