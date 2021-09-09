@@ -128,7 +128,7 @@
 	.swiper-slide {
 		display: flex;
 		justify-content: center;
-		flex-direction: column;
+		align-items: center;
 		height: 85vh;
 		color: #fff;
 
@@ -282,7 +282,7 @@
 				a {
 					display: block;
 					color: #8069b2;
-					border-radius: 15px 0 15px 0;
+					border-radius: 15px 0;
 					border: 1px solid #ddd;
 					font-size: 16px;
 					transition: all .25s;
@@ -534,7 +534,7 @@
 				margin-left: 40px;
 				width: calc(100% - 490px);
 				min-height: 450px;
-				border: 1px solid #eee;
+				border: 1px solid #ddd;
 				border-radius: 10px;
 
 				.project-tit {
@@ -576,23 +576,23 @@
 						margin-right: 15px;
 						display: block;
 						color: #fff;
-						background: #ccc;
-						border: 1px solid #ccc;
-						border-radius: 15px 0 15px 0;
+						background: #ddd;
+						border: 1px solid #ddd;
+						border-radius: 15px 0;
 						-webkit-transition: all .25s;
 						transition: all .25s;
 					}
 
 					.icon-link {
 						color: #888;
-						border: 1px solid #ccc;
-						border-radius: 15px 0 15px 0;
+						border: 1px solid #ddd;
+						border-radius: 15px 0;
 						-webkit-transition: all .25s;
 						transition: all .25s;
 
 						&:hover {
-							background: #ccc;
-							border: 1px solid #ccc;
+							background: #ddd;
+							border: 1px solid #ddd;
 							color: #fff;
 						}
 					}
@@ -621,20 +621,23 @@
 				a {
 					display: block;
 					padding: 20px 0;
-					color: #fff;
-					background: #8069b2;
-					font-size: 15px;
+					color: #8069b2;
+					background: #f5f5f5;
+					font-size: 14px;
 					font-weight: 400;
 					text-align: center;
+					border-radius: 15px 0;
 
 					&.active {
-						background: #eee;
-						color: #8069b2;
-						font-weight: 500;
+						background: #8069b2;
+						color: #f5f5f5;
+						font-size: 15px;
+						font-weight: 700;
 					}
 
 					&:hover {
-						font-weight: 500;
+						font-size: 15px;
+						font-weight: 700;
 					}
 				}
 
@@ -661,8 +664,8 @@
 					li {
 						padding: 20px;
 						margin-right: 30px;
-						width: calc(100% / 3);
-						background: #f9f9f9;
+						width: calc(100% / 2);
+						background: #f5f5f5;
 
 						&:last-child {
 							margin-right: 0;
@@ -678,8 +681,9 @@
 				}
 
 				.item {
-					padding: 20px;
+					padding: 30px 0 20px;
 					border: 1px dashed #8069b2;
+					border-radius: 15px;
 					text-align: center;
 
 					.item-thumb {
@@ -740,6 +744,19 @@
 					}
 				}
 			}
+		}
+	}
+
+	.teams-desc {
+		padding-top: 30px;
+		color: #8069b2;
+		font-size: 13px;
+		font-weight: 300;
+		text-align: right;
+
+		.purple {
+			color: #63489a;
+			font-weight: 700;
 		}
 	}
 }
@@ -809,7 +826,7 @@
 					color: #fff;
 					font-size: 13px;
 					font-weight: 500;
-					border-radius: 15px 0 15px 0;
+					border-radius: 15px 0;
 					letter-spacing: 2px;
 					text-align: center;
 					transition: all 2.5s;

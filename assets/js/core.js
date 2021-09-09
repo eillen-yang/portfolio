@@ -60,16 +60,19 @@ $(document).ready(function () {
 	});
 
 	// main slide
-	const mainSlider = new Swiper('.sliderMain', {
+	const mainSlider = new Swiper('.sec-slider .swiper-container', {
+		// loop: true,
+		// loopedSlides: 1,
 		slidesPerView: 1,
-		speed: 1000,
 		effect: 'fade',
 		fadeEffect: {
 			crossFade: true
 		},
+		speed: 1000,
 		autoplay: {
-			delay: 3000,
+			delay: 1000,
 		},
+
 		on: {
 			init: function (swiper) {
 				header.sliderEvent(swiper);
@@ -81,6 +84,7 @@ $(document).ready(function () {
 			}
 		}
 	});
+	console.log(mainSlider);
 
 	// Project slide
 	const contentSlide = new Swiper('.contentSlide .swiper-container', {
@@ -155,14 +159,14 @@ $(document).ready(function () {
 				url: 'https://randomuser.me/api/',
 				data: {
 					gender: '',
-					results: 3
+					results: 4
 				},
 				dataType: 'json',
 
 				success: function (data) {
 					var output = '';
 
-					for(var i = 0; i < 3; i++) {
+					for(var i = 0; i < 4; i++) {
 						var user = data.results[i];
 
 						output += '<li>';
