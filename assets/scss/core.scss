@@ -260,7 +260,6 @@
 }
 
 .sec-introduce {
-	height: 90vh;
 
 	.tabs {
 		position: relative;
@@ -604,7 +603,6 @@
 }
 
 .sec-teams {
-	height: 90vh;
 	background: #fff;
 
 	.tabs {
@@ -673,10 +671,39 @@
 					}
 				}
 
+				.teams-desc {
+					display: flex;
+					justify-content: center;
+					margin-bottom: 25px;
+					padding: 10px 20px;
+					min-width: 860px;
+					border: 1px solid #ddd;
+					border-radius: 15px;
+
+					.team-desc-inner {
+						padding-right: 30px;
+						font-size: 15px;
+
+						.tit {
+							color: #555;
+							font-weight: 500;
+						}
+
+						.con {
+							color: #63489a;
+							font-weight: 700;
+						}
+
+						&:last-child {
+							padding-right: 0;
+						}
+					}
+				}
+
 				&.active {
 					display: flex;
 					align-items: center;
-					justify-content: center;
+					flex-direction: column;
 					min-height: 300px;
 				}
 
@@ -747,9 +774,9 @@
 		}
 	}
 
-	.teams-desc {
+	.teams-caution {
 		padding-top: 30px;
-		color: #8069b2;
+		color: #63489a;
 		font-size: 13px;
 		font-weight: 300;
 		text-align: right;

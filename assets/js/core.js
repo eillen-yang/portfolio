@@ -61,16 +61,14 @@ $(document).ready(function () {
 
 	// main slide
 	const mainSlider = new Swiper('.sec-slider .swiper-container', {
-		// loop: true,
-		// loopedSlides: 1,
 		slidesPerView: 1,
 		effect: 'fade',
 		fadeEffect: {
-			crossFade: true
+		   crossFade: true
 		},
 		speed: 1000,
 		autoplay: {
-			delay: 1000,
+		   delay: 1500,
 		},
 
 		on: {
