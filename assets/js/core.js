@@ -109,19 +109,15 @@ $(document).ready(function () {
 			nextEl: '.nextEl',
 		},
 		breakpoints: {
-			// when window width is >= 320px
 			320: {
 			  slidesPerView: 1.2
 			},
-			// when window width is >= 480px
 			480: {
 			  slidesPerView: 2.5
 			},
-			// when window width is >= 640px
 			768: {
 			  slidesPerView: 3.2
 			},
-			// when window width is >= 1280px
 			1024: {
 			  slidesPerView: 3.8
 			}
