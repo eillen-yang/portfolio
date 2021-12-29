@@ -82,7 +82,7 @@ $(document).ready(function () {
 			}
 		}
 	});
-	console.log(mainSlider);
+	// console.log(mainSlider);
 
 	// Project slide
 	const contentSlide = new Swiper('.contentSlide .swiper-container', {
