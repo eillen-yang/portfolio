@@ -49,7 +49,7 @@ $(document).ready(function () {
 	});
 
 	// header navigation
-	var header_link = document.querySelectorAll('#header .nav a');
+	const header_link = document.querySelectorAll('#header .nav a');
 	header_link.forEach(function (elm, idx) {
 		elm.addEventListener('click', function(e) {
 			e.preventDefault();
@@ -127,13 +127,13 @@ $(document).ready(function () {
 
 	// tem
 	$('.tabs').each(function (index, element) {
-		var btn = $(this).find('.tabs-nav a');
-		var content = $(this).find('.tabs-content');
+		const btn = $(this).find('.tabs-nav a');
+		const content = $(this).find('.tabs-content');
 
 		btn.on('click', function (e) {
 			e.preventDefault();
-			var t = $(this);
-			var target = $(this).attr('href');
+			const t = $(this);
+			const target = $(this).attr('href');
 				target = target.replace('#', '');
 
 			if ( ! $(this).hasClass('active') ) {
@@ -148,7 +148,7 @@ $(document).ready(function () {
 		});
 	});
 
-		var designer = function () {
+		const designer = function () {
 			$.ajax({
 				url: 'https://randomuser.me/api/',
 				data: {
@@ -158,10 +158,10 @@ $(document).ready(function () {
 				dataType: 'json',
 
 				success: function (data) {
-					var output = '';
+					const output = '';
 
-					for(var i = 0; i < 4; i++) {
-						var user = data.results[i];
+					for(let i = 0; i < 4; i++) {
+						const user = data.results[i];
 
 						output += '<li>';
 						output += '<div class="item">';
@@ -190,7 +190,7 @@ $(document).ready(function () {
 		}
 		designer();
 
-		var backend = function () {
+		const backend = function () {
 			$.ajax({
 				url: 'https://randomuser.me/api/',
 				data: {
@@ -200,10 +200,10 @@ $(document).ready(function () {
 				dataType: 'json',
 
 				success: function (data) {
-					var output = '';
+					const output = '';
 
-					for(var i = 0; i < 2; i++) {
-						var user = data.results[i];
+					for(let i = 0; i < 2; i++) {
+						const user = data.results[i];
 
 						output += '<li>';
 						output += '<div class="item">';
@@ -232,7 +232,7 @@ $(document).ready(function () {
 		}
 		backend();
 
-		var frontend = function () {
+		const frontend = function () {
 			$.ajax({
 				url: 'https://randomuser.me/api/',
 				data: {
@@ -242,10 +242,10 @@ $(document).ready(function () {
 				dataType: 'json',
 
 				success: function (data) {
-					var output = '';
+					const output = '';
 
-					for(var i = 0; i < 3; i++) {
-						var user = data.results[i];
+					for(let i = 0; i < 3; i++) {
+						const user = data.results[i];
 
 						output += '<li>';
 						output += '<div class="item">';
