@@ -133,7 +133,7 @@ $(document).ready(function () {
 		btn.on('click', function (e) {
 			e.preventDefault();
 			const t = $(this);
-			const target = $(this).attr('href');
+			let target = $(this).attr('href');
 				target = target.replace('#', '');
 
 			if ( ! $(this).hasClass('active') ) {
@@ -158,7 +158,7 @@ $(document).ready(function () {
 				dataType: 'json',
 
 				success: function (data) {
-					const output = '';
+					let output = '';
 
 					for(let i = 0; i < 4; i++) {
 						const user = data.results[i];
@@ -200,7 +200,7 @@ $(document).ready(function () {
 				dataType: 'json',
 
 				success: function (data) {
-					const output = '';
+					let output = '';
 
 					for(let i = 0; i < 2; i++) {
 						const user = data.results[i];
@@ -242,7 +242,7 @@ $(document).ready(function () {
 				dataType: 'json',
 
 				success: function (data) {
-					const output = '';
+					let output = '';
 
 					for(let i = 0; i < 3; i++) {
 						const user = data.results[i];
