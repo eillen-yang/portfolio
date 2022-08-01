@@ -1,2 +1,3 @@
 # sample-landing
-final-landing
+
+### 실무에서 자주 사용하는 기능들을 원페이지로 풀어낸 작업입니다.
