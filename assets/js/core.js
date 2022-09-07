@@ -1,313 +1,377 @@
 $(document).ready(function () {
-	// Header
-	const header = {
-		elm: document.querySelector('#header'),
-		theme: '',
-		sliderEvent: function (slider) {
-			// 슬라이더 init, slideChange 이벤트에 따른 액션
-			const t = this;
+  // Header
+  const header = {
+    elm: document.querySelector("#header"),
+    theme: "",
+    sliderEvent: function (slider) {
+      // 슬라이더 init, slideChange 이벤트에 따른 액션
+      const t = this;
 
-			let activeSlider = slider.slides[ slider.activeIndex ];
-			let getHeaderTheme = activeSlider.dataset.headerTheme;
+      let activeSlider = slider.slides[slider.activeIndex];
+      let getHeaderTheme = activeSlider.dataset.headerTheme;
 
-			t.theme = getHeaderTheme;
+      t.theme = getHeaderTheme;
 
-			if ( ! t.elm.classList.contains('fixed')) {
-				t.elm.setAttribute('data-header-theme', t.theme);
-			}
-		},
+      if (!t.elm.classList.contains("fixed")) {
+        t.elm.setAttribute("data-header-theme", t.theme);
+      }
+    },
 
-		scrollEvent: function () {
-			// 스크롤 위치에 따라 header에 fixed 추가
-			const t = this;
+    scrollEvent: function () {
+      // 스크롤 위치에 따라 header에 fixed 추가
+      const t = this;
 
-			if ( window.scrollY > 150 ) {
-				t.elm.classList.add('fixed');
-			} else {
-				t.elm.classList.remove('fixed');
+      if (window.scrollY > 150) {
+        t.elm.classList.add("fixed");
+      } else {
+        t.elm.classList.remove("fixed");
 
-				// fixed 풀렸을 때, 슬라이더 변화에 맞게 헤더 테마 변경
-				if ( t.theme != '' ) {
-					t.elm.setAttribute('data-header-theme', t.theme);
-				}
-			}
-		},
+        // fixed 풀렸을 때, 슬라이더 변화에 맞게 헤더 테마 변경
+        if (t.theme != "") {
+          t.elm.setAttribute("data-header-theme", t.theme);
+        }
+      }
+    },
 
-		anchor: function (target) {
-			// gnb 메뉴 클릭 시 anchor 이동
-			target = target.replace('#', '#sec-');
-			$('html, body').animate({
-				scrollTop: $(target).offset().top
-			}, 500);
-		}
-	}
+    anchor: function (target) {
+      // gnb 메뉴 클릭 시 anchor 이동
+      target = target.replace("#", "#sec-");
+      $("html, body").animate(
+        {
+          scrollTop: $(target).offset().top,
+        },
+        500
+      );
+    },
+  };
 
-	// header scroll
-	header.scrollEvent();
-	window.addEventListener('scroll', function (e) {
-		header.scrollEvent();
-	});
+  // header scroll
+  header.scrollEvent();
+  window.addEventListener("scroll", function (e) {
+    header.scrollEvent();
+  });
 
-	// header navigation
-	const header_link = document.querySelectorAll('#header .nav a');
-	header_link.forEach(function (elm, idx) {
-		elm.addEventListener('click', function(e) {
-			e.preventDefault();
+  // header navigation
+  const header_link = document.querySelectorAll("#header .nav a");
+  header_link.forEach(function (elm, idx) {
+    elm.addEventListener("click", function (e) {
+      e.preventDefault();
 
-			const target = this.getAttribute('href');
-			header.anchor(target);
-		});
-	});
+      const target = this.getAttribute("href");
+      header.anchor(target);
+    });
+  });
 
-	// main slide
-	const mainSlider = new Swiper('.sec-slider .swiper-container', {
-		slidesPerView: 1,
-		effect: 'fade',
-		fadeEffect: {
-		   crossFade: true
-		},
-		speed: 1000,
-		autoplay: {
-		   delay: 1500,
-		},
+  // header mobile nav
+  const mobileNavBtn = () => {
+    const Button = document.querySelector(".mobile-nav");
+    const Nav = document.querySelector(".nav");
+    const body = document.getElementsByTagName("body")[0];
+    const main = document.getElementsByTagName("main")[0];
 
-		on: {
-			init: function (swiper) {
-				header.sliderEvent(swiper);
-				// console.log(header);
-			},
-			slideChange: function (swiper) {
-				header.sliderEvent(swiper);
-				// console.log(header);
-			}
-		}
-	});
-	// console.log(mainSlider);
+    Button.addEventListener("click", () => {
+      // 버튼 클릭시, theme가 .nav와 button이 작동하지 않게하기? 아니면 color 고정?
 
-	// Project slide
-	const contentSlide = new Swiper('.contentSlide .swiper-container', {
-		spaceBetween: 10,
-		loop: true,
-		loopedSlides: 4,
-		watchSlidesVisibility: true,
-		watchSlidesProgress: true,
-		allowTouchMove: false,
-	});
+      Button.classList.toggle("active");
+      Nav.classList.toggle("active");
+      body.classList.toggle("scroll-lock");
+    });
 
-	const thumbnailImg = new Swiper('.thumbnailImg .swiper-container', {
-		spaceBetween: 5,
-		slidesPerView: 'auto',
-		loop: true,
-		loopedSlides: 4,
-		allowTouchMove: false,
-		slideToClickedSlide: true,
-		grabCursor: true,
-		thumbs: {
-			swiper: contentSlide
-		},
-		navigation: {
-			nextEl: '.nextEl',
-		},
-		breakpoints: {
-			320: {
-			  slidesPerView: 1.2
-			},
-			480: {
-			  slidesPerView: 2.5
-			},
-			768: {
-			  slidesPerView: 3.2
-			},
-			1024: {
-			  slidesPerView: 3.8
-			}
-		}
-	});
+    main.addEventListener("click", () => {
+      Button.classList.remove("active");
+      Nav.classList.remove("active");
+    });
+  };
+  mobileNavBtn();
 
+  // main slide
+  const mainSlider = new Swiper(".sec-slider .swiper-container", {
+    slidesPerView: 1,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+    speed: 1000,
+    // autoplay: {
+    //   delay: 1500,
+    // },
 
-	// tem
-	$('.tabs').each(function (index, element) {
-		const btn = $(this).find('.tabs-nav a');
-		const content = $(this).find('.tabs-content');
+    on: {
+      init: function (swiper) {
+        header.sliderEvent(swiper);
+        // console.log(header);
+      },
+      slideChange: function (swiper) {
+        header.sliderEvent(swiper);
+        // console.log(header);
+      },
+    },
+  });
+  // console.log(mainSlider);
 
-		btn.on('click', function (e) {
-			e.preventDefault();
-			const t = $(this);
-			let target = $(this).attr('href');
-				target = target.replace('#', '');
+  // Project slide
+  const contentSlide = new Swiper(".contentSlide .swiper-container", {
+    spaceBetween: 10,
+    loop: true,
+    loopedSlides: 4,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    allowTouchMove: true,
+    // thumbs: {
+    //   swiper: thumbnailImg,
+    // },
+    breakpoints: {
+      1024: {
+        allowTouchMove: false,
+      },
+    },
+  });
 
-			if ( ! $(this).hasClass('active') ) {
-				t.parent().siblings().find('a').removeClass('active');
-				t.addClass('active');
+  const thumbnailImg = new Swiper(".thumbnailImg .swiper-container", {
+    spaceBetween: 5,
+    slidesPerView: "auto",
+    loop: true,
+    loopedSlides: 4,
+    allowTouchMove: true,
+    slideToClickedSlide: true,
+    grabCursor: true,
+    thumbs: {
+      swiper: contentSlide,
+    },
+    navigation: {
+      nextEl: ".nextEl",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.2,
+      },
+      480: {
+        slidesPerView: 2.5,
+      },
+      768: {
+        slidesPerView: 3.2,
+      },
+      1024: {
+        slidesPerView: 3.8,
+        allowTouchMove: false,
+      },
+    },
+  });
 
-				content.find('.tab-common').removeClass('active');
-				content.find('.' + target).addClass('active');
+  // tem
+  $(".tabs").each(function (index, element) {
+    const btn = $(this).find(".tabs-nav a");
+    const content = $(this).find(".tabs-content");
 
-				// console.log(target);
-			}
-		});
-	});
+    btn.on("click", function (e) {
+      e.preventDefault();
+      const t = $(this);
+      let target = $(this).attr("href");
+      target = target.replace("#", "");
 
-		const designer = function () {
-			$.ajax({
-				url: 'https://randomuser.me/api/',
-				data: {
-					gender: '',
-					results: 4
-				},
-				dataType: 'json',
+      if (!$(this).hasClass("active")) {
+        t.parent().siblings().find("a").removeClass("active");
+        t.addClass("active");
 
-				success: function (data) {
-					let output = '';
+        content.find(".tab-common").removeClass("active");
+        content.find("." + target).addClass("active");
 
-					for(let i = 0; i < 4; i++) {
-						const user = data.results[i];
+        // console.log(target);
+      }
+    });
+  });
 
-						output += '<li>';
-						output += '<div class="item">';
-						output += '	<div class="item-thumb">';
-						output += '		<img src="'+user.picture.large+'" alt="user images">';
-						output += '	</div>';
-						output += ' ';
-						output += '	<div class="item-data">';
-						output += '		<div class="name">'+user.name.first+'</div>';
-						output += ' 	<div class="gender"> '+user.gender+' </div>';
-						output += ' 	<div class="item-icon">';
-						output += '			<div class="email"><a href="mailto:'+ user.email +'"><i class="far fa-envelope"></i></a></div>';
-						output += '			<div class="tel"><a href="tel:'+ user.phone +'"><i class="fas fa-phone"></i></a></div>';
-						output += '			<div class="city"><a href="javascript:void(0)"><i class="fas fa-map-marker-alt"></i></a></div>';
-						output += '		</div>';
-						output += '	</div>';
-						output += '</div>';
-						output += '</li>';
+  const designer = function () {
+    $.ajax({
+      url: "https://randomuser.me/api/",
+      data: {
+        gender: "",
+        results: 4,
+      },
+      dataType: "json",
 
-						// console.log(user);
+      success: function (data) {
+        let output = "";
 
-						$('.tab01 ul').html(output);	//랜덤으로 바뀌기
-					}
-				}
-			});
-		}
-		designer();
+        for (let i = 0; i < 4; i++) {
+          const user = data.results[i];
 
-		const backend = function () {
-			$.ajax({
-				url: 'https://randomuser.me/api/',
-				data: {
-					gender: 'male',
-					results: 2
-				},
-				dataType: 'json',
+          output += "<li>";
+          output += '<div class="item">';
+          output += '	<div class="item-thumb">';
+          output += '		<img src="' + user.picture.large + '" alt="user images">';
+          output += "	</div>";
+          output += " ";
+          output += '	<div class="item-data">';
+          output += '		<div class="name">' + user.name.first + "</div>";
+          output += ' 	<div class="gender"> ' + user.gender + " </div>";
+          output += ' 	<div class="item-icon">';
+          output +=
+            '			<div class="email"><a href="mailto:' +
+            user.email +
+            '"><i class="far fa-envelope"></i></a></div>';
+          output +=
+            '			<div class="tel"><a href="tel:' +
+            user.phone +
+            '"><i class="fas fa-phone"></i></a></div>';
+          output +=
+            '			<div class="city"><a href="javascript:void(0)"><i class="fas fa-map-marker-alt"></i></a></div>';
+          output += "		</div>";
+          output += "	</div>";
+          output += "</div>";
+          output += "</li>";
 
-				success: function (data) {
-					let output = '';
+          // console.log(user);
 
-					for(let i = 0; i < 2; i++) {
-						const user = data.results[i];
+          $(".tab01 ul").html(output); //랜덤으로 바뀌기
+        }
+      },
+    });
+  };
+  designer();
 
-						output += '<li>';
-						output += '<div class="item">';
-						output += '	<div class="item-thumb">';
-						output += '		<img src="'+user.picture.large+'" alt="user images">';
-						output += '	</div>';
-						output += ' ';
-						output += '	<div class="item-data">';
-						output += '		<div class="name">'+user.name.first+'</div>';
-						output += ' 	<div class="gender"> '+user.gender+' </div>';
-						output += ' 	<div class="item-icon">';
-						output += '			<div class="email"><a href="mailto:'+ user.email +'"><i class="far fa-envelope"></i></a></div>';
-						output += '			<div class="tel"><a href="tel:'+ user.phone +'"><i class="fas fa-phone"></i></a></div>';
-						output += '			<div class="city"><a href="city: '+user.city+'"><i class="fas fa-map-marker-alt"></i></a></div>';
-						output += '		</div>';
-						output += '	</div>';
-						output += '</div>';
-						output += '</li>';
+  const backend = function () {
+    $.ajax({
+      url: "https://randomuser.me/api/",
+      data: {
+        gender: "male",
+        results: 2,
+      },
+      dataType: "json",
 
-						// console.log(user);
+      success: function (data) {
+        let output = "";
 
-						$('.tab02 ul').html(output);	//랜덤으로 바뀌기
-					}
-				}
-			});
-		}
-		backend();
+        for (let i = 0; i < 2; i++) {
+          const user = data.results[i];
 
-		const frontend = function () {
-			$.ajax({
-				url: 'https://randomuser.me/api/',
-				data: {
-					gender: 'female',
-					results: 3
-				},
-				dataType: 'json',
+          output += "<li>";
+          output += '<div class="item">';
+          output += '	<div class="item-thumb">';
+          output += '		<img src="' + user.picture.large + '" alt="user images">';
+          output += "	</div>";
+          output += " ";
+          output += '	<div class="item-data">';
+          output += '		<div class="name">' + user.name.first + "</div>";
+          output += ' 	<div class="gender"> ' + user.gender + " </div>";
+          output += ' 	<div class="item-icon">';
+          output +=
+            '			<div class="email"><a href="mailto:' +
+            user.email +
+            '"><i class="far fa-envelope"></i></a></div>';
+          output +=
+            '			<div class="tel"><a href="tel:' +
+            user.phone +
+            '"><i class="fas fa-phone"></i></a></div>';
+          output +=
+            '			<div class="city"><a href="city: ' +
+            user.city +
+            '"><i class="fas fa-map-marker-alt"></i></a></div>';
+          output += "		</div>";
+          output += "	</div>";
+          output += "</div>";
+          output += "</li>";
 
-				success: function (data) {
-					let output = '';
+          // console.log(user);
 
-					for(let i = 0; i < 3; i++) {
-						const user = data.results[i];
+          $(".tab02 ul").html(output); //랜덤으로 바뀌기
+        }
+      },
+    });
+  };
+  backend();
 
-						output += '<li>';
-						output += '<div class="item">';
-						output += '	<div class="item-thumb">';
-						output += '		<img src="'+user.picture.large+'" alt="user images">';
-						output += '	</div>';
-						output += ' ';
-						output += '	<div class="item-data">';
-						output += '		<div class="name">'+user.name.first+'</div>';
-						output += ' 	<div class="gender"> '+user.gender+' </div>';
-						output += ' 	<div class="item-icon">';
-						output += '			<div class="email"><a href="mailto:'+ user.email +'"><i class="far fa-envelope"></i></a></div>';
-						output += '			<div class="tel"><a href="tel:'+ user.phone +'"><i class="fas fa-phone"></i></a></div>';
-						output += '			<div class="city"><a href="city: '+user.city+'"><i class="fas fa-map-marker-alt"></i></a></div>';
-						output += '		</div>';
-						output += '	</div>';
-						output += '</div>';
-						output += '</li>';
+  const frontend = function () {
+    $.ajax({
+      url: "https://randomuser.me/api/",
+      data: {
+        gender: "female",
+        results: 3,
+      },
+      dataType: "json",
 
-						// console.log(user);
+      success: function (data) {
+        let output = "";
 
-						$('.tab03 ul').html(output);	//랜덤으로 바뀌기
-					}
-				}
-			});
-		}
-		frontend();
+        for (let i = 0; i < 3; i++) {
+          const user = data.results[i];
 
-	//contact us
-	window.sendRequest = function(form) {
-		// form 데이터 가져오기
-		const username = form.username;
-		const email = form.email;
-		const message = form.message;
+          output += "<li>";
+          output += '<div class="item">';
+          output += '	<div class="item-thumb">';
+          output += '		<img src="' + user.picture.large + '" alt="user images">';
+          output += "	</div>";
+          output += " ";
+          output += '	<div class="item-data">';
+          output += '		<div class="name">' + user.name.first + "</div>";
+          output += ' 	<div class="gender"> ' + user.gender + " </div>";
+          output += ' 	<div class="item-icon">';
+          output +=
+            '			<div class="email"><a href="mailto:' +
+            user.email +
+            '"><i class="far fa-envelope"></i></a></div>';
+          output +=
+            '			<div class="tel"><a href="tel:' +
+            user.phone +
+            '"><i class="fas fa-phone"></i></a></div>';
+          output +=
+            '			<div class="city"><a href="city: ' +
+            user.city +
+            '"><i class="fas fa-map-marker-alt"></i></a></div>';
+          output += "		</div>";
+          output += "	</div>";
+          output += "</div>";
+          output += "</li>";
 
-		// 유효성 검사
-		if ( username.value == '' ) {
-			alert('Company or Your-name is required.');
-			username.focus();
+          // console.log(user);
 
-			return false;
-		}
+          $(".tab03 ul").html(output); //랜덤으로 바뀌기
+        }
+      },
+    });
+  };
+  frontend();
 
-		if ( email.value == '' ) {
-			alert('Email is required.');
-			email.focus();
+  //contact us
+  window.sendRequest = function (form) {
+    // form 데이터 가져오기
+    const username = form.username;
+    const email = form.email;
+    const message = form.message;
 
-			return false;
-		}
+    // 유효성 검사
+    if (username.value == "") {
+      alert("Company or Your-name is required.");
+      username.focus();
 
-		if ( message.value == '' ) {
-			alert('Message is required.');
-			message.focus();
+      return false;
+    }
 
-			return false;
-		}
+    if (email.value == "") {
+      alert("Email is required.");
+      email.focus();
 
-		// 메일보내기
-		message.value = message.value.replace('\n', '%0D%0A');
-		window.open('mailto:yangareum0130@gmail.com?subject=[구인 제안] Request Project&body=Company or Your-name:' + username.value + '%0D%0AEmail: ' + email.value + '%0D%0AMessage: ' + message.value);
+      return false;
+    }
 
-		return false;
-	}
+    if (message.value == "") {
+      alert("Message is required.");
+      message.focus();
+
+      return false;
+    }
+
+    // 메일보내기
+    message.value = message.value.replace("\n", "%0D%0A");
+    window.open(
+      "mailto:yangareum0130@gmail.com?subject=[구인 제안] Request Project&body=Company or Your-name:" +
+        username.value +
+        "%0D%0AEmail: " +
+        email.value +
+        "%0D%0AMessage: " +
+        message.value
+    );
+
+    return false;
+  };
 });
-
