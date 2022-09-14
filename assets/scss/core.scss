@@ -100,7 +100,9 @@
 		}
 
 		.nav {
+
 			.navList {
+				
 				a {
 					padding: 23px 0;
 					color: #555;
@@ -486,17 +488,28 @@
 			}
 		}
 
-		.nextEl {
+		.slide-button {
 			position: absolute;
 			top: 50%;
-			right: 25px;
 			width: 50px;
 			height: 50px;
-			transform: translate(-50%, -50%);
-			background: #f1f1f1 url(../images/icon/chevron-right.png) no-repeat 50% 50%;
+			transform: translate(-50%, -50%) rotate(180deg);
+			background-color: #f1f1f1;
+			background-image: url(../images/icon/chevron-right.png);
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
 			opacity: 0.5;
 			cursor: pointer;
 			z-index: 1;
+
+			&.next {
+				right: 25px;
+				transform: translate(-50%, -50%);
+			}
+
+			&.prev {
+				left: 25px;
+			}
 
 			&:hover {
 				opacity: 0.9;
@@ -601,7 +614,6 @@
 						font-size: 15px;
 						text-align: center;
 						text-transform: uppercase;
-						vertical-align: middle;
 					}
 
 					.img-open {

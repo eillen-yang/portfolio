@@ -22,6 +22,8 @@
     align-items: flex-start;
     flex-direction: row;
     padding-top: 40px;
+    min-height: 100vh;
+    height: 100%;
 
     .title {
       padding-bottom: 30px;
@@ -264,7 +266,9 @@
   }
 
   .sec-teams {
+
     .tabs {
+    
       .tabs-nav {
         display: inline-flex;
         justify-content: space-between;
@@ -294,7 +298,6 @@
             align-items: flex-start;
             flex-wrap: wrap;
             width: 100%;
-            height: 60vh;
 
             li {
               padding: 12px;
@@ -425,6 +428,7 @@
                 min-width: 390px;
               }
             }
+            
             .sec01-text {
               bottom: 56%;
               left: 68%;
@@ -493,6 +497,10 @@
                   width: 40px;
                   height: 40px;
                 }
+                
+                p {
+                  font-size: 13px;
+                }
 
                 &:nth-child(-n+2) {
                   margin-bottom: 15px;
@@ -517,6 +525,10 @@
         height: 180px;
         background-position: 50% 20%;
       }
+
+      .slide-button {
+        display: none;
+      }
     }
 
     .contentSlide {
@@ -532,15 +544,23 @@
           padding: 20px;
           margin-right: 0;
           width: 100%;
-          min-height: 400px;
+          min-height: 420px;
 
           .project-info-container {
             flex-direction: inherit;
+            justify-content: space-between;
 
             .project-info {
               padding-top: 0;
-              margin-right: 10px;
 
+              .tit {
+                padding-right: 0;
+              }
+
+              .tit, .desc {
+                display: block;
+              }
+              
               &:last-child {
                 margin-right: 0;
               }
@@ -566,8 +586,8 @@
         margin-top: 12px;
 
         .tab-common {
+
           .list-items {
-            height: 57vh;
 
             li {
               width: calc(50% - 6px);
@@ -641,12 +661,14 @@
 
       .navList {
         padding: 0;
-        height: 120px;
-        line-height: 3;
+        height: 100px;
+        line-height: 100px;
         border-bottom: 1px solid #ddd;
 
         a {
-          font-size: 24px;
+          padding: 0 23px 0 0;
+          color: #555;
+          font-size: 18px;
           text-transform: uppercase;
         }
       }
@@ -675,6 +697,7 @@
       }
 
       &.active span {
+        background-color: #555;
         transition: margin .25s, transform 0.25s 0.25s;
         
         &.bar1 {
@@ -704,11 +727,82 @@
     }
 
     &.fixed {
+      .nav {
+
+        .navList {
+
+          a {
+            padding: 0 23px 0 0;
+          }
+        }
+      }
+
       .mobile-nav {
-        padding: 24px;
+        padding: 24px 0px;
 
         span {
           background: #555;
+        }
+      }
+    }
+  }
+
+  .sec-slider {
+
+    .swiper-slide {
+
+      .slideCont {
+        height: 100vh;
+
+        &.sec01 {
+
+          .sec01-left {
+
+            .sec01-img {
+
+              &::before {
+                display: none;
+              }
+            }
+
+            .sec01-text {
+              bottom: 40%;
+              left: 70%;
+              font-size: 30px;
+            }
+          }
+        }
+
+        &.sec02 {
+          padding-top: 60px;
+
+          .sec02-left {
+
+            .sect-subtitle {
+              font-size: 24px;
+            }
+            .sect-title01 {
+              font-size: 60px;
+            }
+            .sect-title02 {
+              font-size: 48px;
+            }
+          }
+
+          .sec02-right {
+            padding-top: 0;
+
+            .sent-intro {
+              font-size: 13px;
+            }
+            .sent-text {
+              font-size: 15px;
+            }
+          }
+        }
+
+        &.sec03 {
+          font-size: 28px;
         }
       }
     }
@@ -746,6 +840,13 @@
 
             .mybox-icon {
               padding-top: 20px;
+
+              .intro-icon {
+
+                p {
+                  font-size: 12px;
+                }
+              }
             }
           }
         }
@@ -763,6 +864,22 @@
             span {
               display: none;
             }
+          }
+        }
+      }
+    }
+  }
+
+  .sec-contactus {
+
+    .contact {
+
+      .form {
+
+        .inputInner {
+
+          input, textarea {
+            min-width: 320px;
           }
         }
       }
