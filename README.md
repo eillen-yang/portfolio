@@ -62,8 +62,8 @@ Designer부분은 성별은 랜덤, 인원은 4명
 FrontEnd부분은 성별은 남성, 인원은 2명 
 BackEnd부분은 성별은 여성, 인원은 3명
 
-```
 [랜덤 API][gdh]
+```
 [gdh]: https://randomuser.me/api/
 
 
