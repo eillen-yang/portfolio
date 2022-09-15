@@ -42,7 +42,7 @@ const designer = function () {
       }
     },
     error: (error) => {
-      console.log(error);
+      console.log(JSON.stringify(error.statusText));
     },
   });
 };

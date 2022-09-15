@@ -63,7 +63,7 @@ $(document).ready(function () {
   });
 
   // header mobile nav
-  const mobileNavBtn = () => {
+  function mobileNavBtn() {
     const Button = document.querySelector(".mobile-nav");
     const Nav = document.querySelector(".nav");
     const body = document.getElementsByTagName("body")[0];
@@ -73,7 +73,7 @@ $(document).ready(function () {
       Nav.classList.toggle("active");
       body.classList.toggle("scroll-lock");
     });
-  };
+  }
   mobileNavBtn();
 
   // main slide
