@@ -25,15 +25,15 @@
 
 ### Part1. Section ( Profile )
 ```
-간결한 정보들을 보여질 수 있도록 `Tab기능`을 이용해서 표현한 영역입니다.
+간결한 정보들을 보여질 수 있도록 Tab기능을 이용해서 표현한 영역입니다.
 
 첫번째 Tab 
 나의 간단한 상세정보들을 보여주는 Tab입니다. 
-`ICON`들을 클릭하면 연결해둔 경로로 이동이 됩니다.
-1. `GitHub`
-2. `Naver`에서 제공해주는 `API`로 쇼핑검색기능.
-3. 동적인 `PortFolio`.
-4. 기초지식이나 에러, 문제해결 상황을 기록하기위해 쓰는 `블로그`.
+ICON들을 클릭하면 연결해둔 경로로 이동이 됩니다.
+1. GitHub
+2. Naver에서 제공해주는 API로 쇼핑검색기능.
+3. 동적인 PortFolio.
+4. 기초지식이나 에러, 문제해결 상황을 기록하기위해 쓰는 블로그.
 
 두번째 Tab
 '나'를 표현할 수 있는 단어를 이용해 마인드 맵으로 이미지를 만들었습니다.
@@ -56,13 +56,16 @@
 
 ### Part3. Section ( Team : RandomAPI )
 ```
-무료 `API`인 `RandomAPI`를 `ajax`이용해 데이터들을 가지고와서 화면에 표출 시켰습니다. 
+무료 API인 `RandomAPI`를 Ajax이용해 데이터들을 가지고와서 화면에 표출 시켰습니다. 
 공통으로 표출시킨 부분은 이름, 메일, 전화번호 입니다. 
-`Designer`부분은 성별은 랜덤, 인원은 4명 
-`FrontEnd`부분은 성별은 남성, 인원은 2명 
-`BackEnd`부분은 성별은 여성, 인원은 3명 
-`https://randomuser.me/api/`
+Designer부분은 성별은 랜덤, 인원은 4명 
+FrontEnd부분은 성별은 남성, 인원은 2명 
+BackEnd부분은 성별은 여성, 인원은 3명
+
 ```
+[랜덤 API][gdh]
+[gdh]: https://randomuser.me/api/
+
 
 ### Part4. Section ( Contact )
 ```
