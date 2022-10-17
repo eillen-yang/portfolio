@@ -68,11 +68,18 @@ $(document).ready(function () {
     const Nav = document.querySelector(".nav");
     const body = document.getElementsByTagName("body")[0];
 
-    Button.addEventListener("click", () => {
-      Button.classList.toggle("active");
-      Nav.classList.toggle("active");
-      body.classList.toggle("scroll-lock");
-    });
+    const navOpen = (function () {
+      const actived = "active";
+      const lock = "scroll-lock";
+
+      return function () {
+        Button.classList.toggle(actived);
+        Nav.classList.toggle(actived);
+        body.classList.toggle(lock);
+      };
+    })();
+
+    Button.addEventListener("click", navOpen);
   }
   mobileNavBtn();
 
