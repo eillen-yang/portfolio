@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>API03 - 네이버 쇼핑 검색</title>
+
+	<!-- css -->
+	<link rel="stylesheet" href="../assets/css/reset.min.css">
+	<link rel="stylesheet" href="../assets/css/navershopping.min.css">
+
+	<!-- vendor -->
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div id="wrap">
+		<header id="header">
+			<div class="container">
+				<div class="header">
+					<h1 class="title">API03 - 네이버 쇼핑 검색</h1>
+					<p class="description">네이버 쇼핑 검색 만들기</p>
+				</div>
+			</div>
+		</header>
+
+		<main id="main">
+			<div class="container">
+				<div class="main">
+
+					<form onsubmit="return find_movie(this);">
+						<h2 class="title">상품 : </h2>
+						<input name="title" type="search" placeholder="원하시는 상품을 입력해주세요!!">
+						<button type="submit">검색</button>
+					</form>
+
+					<h2 class="title">검색 결과</h2>
+
+					<div id="result"></div>
+				</div>
+			</div>
+		</main>
+	</div>
+
+	<script>
+		var find_movie = function (form) {
+			// console.log(form.title.value); //form 태그로 값 불러오기.
+			var name = form.title.value;
+
+			if ( name == '' ) {
+				alert('원하시는 상품을 입력해주세요!!');
+				return false;
+			}
+
+			$.ajax({
+				url: './functions/naverapi.php',
+				type: 'POST',
+				data: {
+					query: name,
+					display: 10	//10개의 List
+				},
+				dataType: 'json',
+				beforeSend: function () {
+					alert('wow');
+				},
+				success: function (data) {
+					var result = data.items;
+					console.log(result);
+					console.log(result.length);
+
+					var output = '';
+
+					for (var i = 0; i < result.length; i++) {
+						output += '<div class="item">';
+						output += '	<div class="item-thumb">';
+						output += '		<img src="'+ result[i].image +'" alt="사용자 이미지">';
+						output += '	</div>';
+						output += ' ';
+						output += '	<div class="item-info">';
+						output += '		<div class="tit">'+ result[i].title +'</div>';
+						output += '		<div class="name">'+ result[i].category1 +'</div>';
+						output += '		<div class="pubDate">'+ result[i].productId +'</div>';
+						output += '		<div class="link"><a href="link:'+ result[i].link+'">자세히 보기</a></div>';
+						output += '	</div>';
+						output += '</div>';
+					}
+
+
+					$('#result').html(output);
+
+					// console.log(data.items[0]);		//console의 items의 0번째 리스트들을 가지고 온다.
+				},
+				error: function (data) {
+					console.log('Error' + data);
+				},
+				complete: function () {
+					console.log("-END-");
+				}
+			});
+
+			return false;
+		}
+	</script>
+</body>
+</html>

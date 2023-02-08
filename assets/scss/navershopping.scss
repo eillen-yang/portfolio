@@ -1,0 +1,187 @@
+// fonts
+@font-face {
+	font-family: 'Jal_Onuel';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Jal_Onuel.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+// default
+html,
+body {
+	font-family: 'Jal_Onuel', sans-serif;
+	font-size: 14px;
+	background-color: #f1f1f1;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+u {
+	text-decoration: none;
+	border-bottom: 1px solid #000;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 960px + (15px * 2);
+	width: 100%;
+}
+
+#wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: 100vh;
+	background: #fff;
+}
+
+#header {
+	flex: 0 1 auto;
+	padding-top: 30px;
+	width: 100%;
+	height: 200px;
+
+	.description {
+		margin-top: 10px;
+	}
+}
+
+#main {
+	flex: 1 1 auto;
+	padding-bottom: 100px;
+	width: 100%;
+
+	.title {
+		margin-bottom: 10px;
+	}
+
+	hr {
+		margin: 50px 0;
+		height: 1px;
+		background-color: #ddd;
+		border: 0;
+	}
+}
+
+.header {
+	padding: 20px 0;
+	background: #fff;
+	border: 1px solid #03c75a;
+	border-radius: 10px;
+	box-shadow: 0 2px 4px #03c75a;
+	text-align: center;
+
+	.title {
+		color: #03c75a;
+	}
+	.description {
+		color: #222;
+	}
+}
+
+.main {
+	padding: 20px;
+	text-align: center;
+	border: 1px solid #03c75a;
+
+	form {
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid #e1e1e1;
+		font-size: 0;
+
+		.title {
+			display: inline-block;
+			margin-bottom: 0;
+			font-size: 18px;
+			vertical-align: middle;
+		}
+
+		input {
+			display: inline-block;
+			padding: 0 15px;
+			margin: 0 12px;
+			height: 40px;
+			line-height: 38px;
+			font-size: 16px;
+			background: #ffffff;
+			border: 1px solid #03c75a;
+			vertical-align: middle;
+		}
+
+		button {
+			display: inline-block;
+			padding: 0 15px;
+			height: 40px;
+			line-height: 40px;
+			background: #03c75a;
+			color: #fff;
+			font-size: 16px;
+			font-weight: 700;
+			vertical-align: middle;
+		}
+	}
+}
+
+#result {
+	font-size: 0;
+}
+
+.item {
+	display: inline-block;
+	padding: 20px 15px;
+	margin-bottom: 20px;
+	width: calc(50% - 7.5px);
+	height: 210px;
+	border: 1px solid #03c75a;
+	text-align: left;
+	vertical-align: middle;
+	font-size: 0;
+
+	&:nth-child(2n) {
+		margin-left: 15px;
+	}
+	.item-thumb {
+		display: inline-block;
+		width: 122px;
+		vertical-align: middle;
+
+		img {
+			padding: 5px;
+			border: 1px solid #e1e1e1;
+		}
+	}
+	.item-info {
+		display: inline-block;
+		padding-left: 15px;
+		vertical-align: middle;
+
+		.tit {
+			text-align: left;
+			font-size: 14px;
+		}
+		.name {
+			text-align: left;
+			font-size: 14px;
+		}
+		.actor {
+			text-align: left;
+			font-size: 14px;
+		}
+		.pubDate {
+			text-align: left;
+			font-size: 14px;
+		}
+		.link {
+			text-align: left;
+			font-size: 14px;
+		}
+	}
+}
