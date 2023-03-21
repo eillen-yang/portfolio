@@ -108,7 +108,7 @@ $(document).ready(function () {
   });
   // console.log(mainSlider);
 
-  // Project slide
+  // Work slide
   const thumb_nail = new Swiper(".thumbnailImg", {
     loop: true,
     loopedSlides: 4,
@@ -153,29 +153,6 @@ $(document).ready(function () {
   });
   contentSlide.controller.control = thumb_nail;
   thumb_nail.controller.control = contentSlide;
-
-  // tem
-  $(".tabs").each(function (index, element) {
-    const btn = $(this).find(".tabs-nav a");
-    const content = $(this).find(".tabs-content");
-
-    btn.on("click", function (e) {
-      e.preventDefault();
-      const t = $(this);
-      let target = $(this).attr("href");
-      target = target.replace("#", "");
-
-      if (!$(this).hasClass("active")) {
-        t.parent().siblings().find("a").removeClass("active");
-        t.addClass("active");
-
-        content.find(".tab-common").removeClass("active");
-        content.find("." + target).addClass("active");
-
-        // console.log(target);
-      }
-    });
-  });
 
   //contact us
   window.sendRequest = function (form) {

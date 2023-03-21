@@ -1,13 +1,16 @@
 # sample-landing
 
 ## 기획의도
-### 실무에서 자주 사용되어 경험했던 기능들을 기획, 디자인, 개발해서 원페이지로 풀어낸 작업물입니다.
+
+### 실무에서 자주 사용되어 경험했던 기능들을 기획, 디자인, 개발해서 원페이지로 풀어낸 작업물입니다
+
 ```
 처음 만들었던 의도는 가볍게 javascript기능들을 연습하기 위해서 간단하게 원페이지로 디자인해서 작업을 하였다가
 하나씩 추가 하다보니 하나의 랜딩페이지가 되어서 반응형작업까지 마무리 하게된 사연입니다.
 ```
 
 ### Header
+
 ```
 1. 스크롤을 150px 내렸을때 Header부분이 fixed 될 때
 : Header의 Background가 생기며, 글자의 Color가 바뀌는 기능.
@@ -24,6 +27,7 @@
 ```
 
 ### Part1. Section ( Profile )
+
 ```
 간결한 정보들을 보여질 수 있도록 Tab기능을 이용해서 표현한 영역입니다.
 
@@ -40,6 +44,13 @@ ICON들을 클릭하면 연결해둔 경로로 이동이 됩니다.
 ```
 
 ### Part2. Section ( Project )
+
+```
+
+```
+
+### Part3. Section ( Work )
+
 ```
 만들었던 작업물들을 보여주는 영역입니다.
 작업물을 만드는데에 상세정보를 적어두었고, 상용화가 되지 못한 웹사이트들은 `PDF이미지`로 다운받아서 볼 수 있도록 해두었습니다.
@@ -55,6 +66,7 @@ ICON들을 클릭하면 연결해둔 경로로 이동이 됩니다.
 ```
 
 ### Part3. Section ( Team : RandomAPI )
+
 ```
 무료 API인 `RandomAPI`를 Ajax이용해 데이터들을 가지고와서 화면에 표출 시켰습니다. 
 공통으로 표출시킨 부분은 이름, 메일, 전화번호 입니다. 
@@ -62,27 +74,31 @@ Designer부분은 성별은 랜덤, 인원은 4명
 FrontEnd부분은 성별은 남성, 인원은 2명 
 BackEnd부분은 성별은 여성, 인원은 3명
 ```
+
 [랜덤 API][gdh]
 [gdh]: https://randomuser.me/api/
 
-
 ### Part4. Section ( Contact )
+
 ```
 `e-mail` 전송 기능이 되도록 작업해 둔 영역입니다.
 ```
 
 ### Footer
+
 ```
 프로젝트를 만들면서 제공받은 홈페이지를 작성해 두었습니다.
 ```
 
 ### 반응형 (Media Query)
+
 ```
 PC기준 max-width로, 991, 767, 575 로 수치로 작업을 하였습니다.
 제일 작은 사이즈는 375px로 맞춰서 작업을 했습니다.
 ```
 
 ### 작업하면서 풀리지 않아 시간을 쏟았던 곳
+
 ```
 1. 모바일에서 햄버거 메뉴를 클릭 했을 때, header의 컬러의 변화가 고정되어야 한다.
 결론은 간단했다. active가 되었을 때 color의 style을 주면 되었다. 멍충이.. script로만 해결 하려는 생각이 멍충이였다.
@@ -106,6 +122,7 @@ CORS프로토콜 HEAD를 포함하여 HTTP에 요청
 ```
 
 **API Error**
+
 ```
 이러한 에러가 떴다.
 Access to XMLHttpRequest at 'https://randomuser.me/api/?gender=&results=4' from origin 'http://127.0.0.1:5501' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.

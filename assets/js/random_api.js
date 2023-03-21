@@ -38,7 +38,7 @@ const designer = function () {
         output += "</div>";
         output += "</li>";
 
-        $(".tab01 ul").html(output); //랜덤으로 바뀌기
+        $(".tab01 .list-items").html(output); //랜덤으로 바뀌기
       }
     },
     error: (error) => {
@@ -92,7 +92,7 @@ const backend = function () {
 
         // console.log(user);
 
-        $(".tab02 ul").html(output); //랜덤으로 바뀌기
+        $(".tab02 .list-items").html(output); //랜덤으로 바뀌기
       }
     },
   });
@@ -143,7 +143,7 @@ const frontend = function () {
 
         // console.log(user);
 
-        $(".tab03 ul").html(output); //랜덤으로 바뀌기
+        $(".tab03 .list-items").html(output); //랜덤으로 바뀌기
       }
     },
   });

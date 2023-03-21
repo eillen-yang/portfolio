@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/core.css">
+  <title>JS-Study</title>
+</head>
+
+<body>
+  <div id="wrap">
+    <main>
+      <article class="article">
+        <h1>javascript 기본기 공부 기록.</h1>
+        <a class="explanation" href="https://github.com/yangareum1818/javascript-study/blob/main/README.md" target="_blank" rel="noopener noreferrer">정리 글</a>
+      </article>
+
+      <section class="section sec-01">
+        <h2>클로저를 활용한 toggle. <br/> /core.js</h2>
+        <div class="toggle">
+          <p class="toggle_title">최첨단 토글 시스템</p>
+          <span class="chang_text">컬러 : {blue} </span>
+          <button class="toggle_btn">토글 버튼이라구 ! 톡을 !</button>
+        </div>
+      </section>
+
+      <section class="section sec-02">
+        <h2>이벤트 버블링, 캡쳐링, 위임. <br/> /addEvent_bubbleing.js ( console.log()확인 )</h2>
+        <div class="addevent">
+          <div class="capture">
+            <h4>이벤트 캡쳐링</h4>
+            <div class="green">
+              <div class="yellow">
+                <div class="tomato"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bubble">
+            <h4>이벤트 버블링 조건문을 이용해 막기.</h4>
+            <div class="green">
+              <div class="yellow">
+                <div class="tomato"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bubbleing">
+            <h4>이벤트 버블링을 이용한 위임 : 체크리스트</h4>
+            <ul class="itemList">
+              <li>
+                <input type="checkbox" id="list1">
+                <label for="list1">이벤트 리스트 1</label>
+              </li>
+              <li>
+                <input type="checkbox" id="list2">
+                <label for="list2">이벤트 리스트 2</label>
+              </li>
+              <li>
+                <input type="checkbox" id="list3">
+                <label for="list3">이벤트 리스트 3</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section sec-03">
+        <h2>( 순서도를 그리며 ) 쿵쿵따</h2>
+        <button class="start">끝말잇기 START 시작!</button>
+        <div class="follow">
+          <div class="order">
+            <span class="participant">1</span>번째 참가자
+          </div>
+          <div class="suggested">제시어
+            <span id="word" class="word">?</span>
+          </div>
+          <input class="fol_input" type="text" name="" id="">
+          <button class="fol_btn">입력</button>
+        </div>
+      </section>
+
+      <section class="section sec-04">
+        <h2>계산기 만들기</h2>
+        <div class="calculator">
+          <table class="table_style">
+            <thead>
+              <tr>
+                <th>0</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr class="divide">
+                <td>AC</td>
+                <td>%</td>
+                <td>/</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>*</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>+</td>
+              </tr>
+              <tr class="divide">
+                <td>0</td>
+                <td>.</td>
+                <td>=</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    
+    </main>
+    <footer></footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+  <script src="assets/js/core.js"></script>
+  <!-- <script src="assets/js/addEvent_bubbleing.js"></script>
+  <script src="assets/js/follow_up.js"></script> -->
+</body>
+
+</html>
