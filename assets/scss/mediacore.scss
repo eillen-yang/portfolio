@@ -19,7 +19,7 @@
   }
 
   .sec {
-    align-items: flex-start;
+    align-items: center;
     flex-direction: row;
     padding-top: 40px;
     min-height: 100vh;
@@ -36,10 +36,10 @@
   .sec-slider {
     
     .swiper-slide {
-      height: 90vh;
+      height: 100vh;
 
       .slideCont {
-        height: 90vh;
+        height: 100vh;
 
         &.sec01 {
 
@@ -178,6 +178,30 @@
     }
   }
 
+  .sec-project {
+    .tabs {
+      .tabs-content {
+        .tab-common {
+          .project-list {
+            .list-item {
+              .item-stack {
+                overflow-x: scroll;
+
+                .stack {
+                  font-size: 12px;
+                }
+              }
+
+              p {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   .sec-work {
 
     .thumbnailImg {
@@ -250,115 +274,16 @@
           }
 
           .buttonInner {
+            gap: 10px;
+            left: 15px;
             bottom: 15px;
 
             & > * {
               font-size: 14px;
             }
-
-            .img-open {
-              margin-right: 10px;
-            }
           }
         }
       }
-    }
-  }
-
-  .sec-teams {
-
-    .tabs {
-    
-      .tabs-nav {
-        display: inline-flex;
-        justify-content: space-between;
-        width: 100%;
-
-        li {
-          margin-right: 12px;
-          width: 33.33%;
-
-          a {
-            min-width: 100%;
-            height: 48px;
-            line-height: 48px;
-          }
-        }
-      }
-
-      .tabs-content {
-        margin-top: 18px;
-
-        .tab-common {
-          min-width: 100%;
-
-          .list-items {
-            display: inline-flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            width: 100%;
-
-            li {
-              padding: 12px;
-              margin-left: 18px;
-              width: calc(33.33% - 12px);
-
-              &:nth-child(-n+3) {
-                margin-bottom: 18px;
-              }
-              &:first-child, &:nth-child(4) {
-                margin-left: 0;
-              }
-            }
-          }
-
-          .teams-desc {
-            margin-bottom: 18px;
-            padding: 6px 12px;
-            min-width: 100%;
-            border-radius: 4px;
-
-            .team-desc-inner {
-              padding-right: 20px;
-              font-size: 14px;
-
-              .tit {
-                font-weight: 400;
-              }
-              .con {
-                font-weight: 600;
-              }
-            }
-          }
-
-          .item {
-            padding: 15px 10px;
-
-            .item-thumb {
-              width: 70px;
-              height: 70px;
-            }
-
-            .item-data {
-              padding-top: 15px;
-
-              .gender {
-                padding-top: 5px;
-              }
-
-              .item-icon {
-                margin-top: 5px;
-              }
-            }
-          }
-        }
-
-      }
-    }
-
-    .teams-caution {
-      padding-top: 20px;
     }
   }
 
@@ -473,16 +398,29 @@
       .tabs-content {
         
         .tab-common {
-          padding: 20px;
+          padding:  40px 20px;
 
           &.tab01 {
 
             .myBox {
+              flex-direction: column;
 
               .mybox-item {
+                display: flex;
+                flex-wrap: wrap;
+                padding-top: 30px;
+                margin-top: 30px;
+                border-top: 1px solid #ddd;
+                width: 100%;
 
                 .intro-item {
-                  padding-top: 6px;
+                  padding-top: 0;
+                  width: 50%;
+                  text-align: center;
+
+                  &.email, &.address {
+                    padding-top: 20px;
+                  }
                 }
               }
             }
@@ -508,6 +446,41 @@
                 
                 &:nth-child(2n) {
                   margin-right: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sec-project {
+    .tabs {
+      .tabs-nav {
+        height: 45px;
+
+        li {
+          min-width: 120px;
+
+          a {
+            line-height: 43px;
+            font-size: 15px;
+          }
+        }
+      }
+
+      .tabs-content {
+        .tab-common {
+          .project-list {
+            .list-item {
+              width: calc(50% - 5px);
+
+              .view {
+                .back {
+                  .icon {
+                    font-size: 14px;
+                  }
                 }
               }
             }
@@ -572,67 +545,11 @@
           }
 
           .buttonInner {
+            left: 20px;
             bottom: 20px;
           }
         }
       }
-    }
-  }
-
-  .sec-teams {
-    .tabs {
-
-      .tabs-content {
-        margin-top: 12px;
-
-        .tab-common {
-
-          .list-items {
-
-            li {
-              width: calc(50% - 6px);
-
-              &:nth-child(3) {
-                margin-bottom: 0;
-                margin-left: 0;
-              }
-
-              &:nth-child(-n+2) {
-                margin-bottom: 12px;
-              }
-
-              &:nth-child(2n) {
-                margin-left: 12px;
-              }
-            }
-          }
-
-          .teams-desc {
-            margin-bottom: 12px;
-
-            .team-desc-inner {
-              font-size: 13px;
-            }
-          }
-
-          .item {
-
-            .item-data {
-              padding-top: 10px;
-
-              .item-icon {
-                margin-top: 0;
-                font-size: 16px;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .teams-caution {
-      padding-top: 12px;
-      font-size: 12px;
     }
   }
 }
@@ -819,10 +736,10 @@
       }
 
       .tabs-content {
-        margin: 60px auto 0;
+        margin: 0 auto;
 
         .tab-common {
-          padding: 20px 15px;
+          padding: 30px 15px;
 
           &.tab01 {
 
@@ -834,7 +751,17 @@
               }
 
               .mybox-item {
-                display: none;
+                padding-top: 20px;
+                margin-top: 20px;
+
+                .intro-item {
+                  padding-top: 10px;
+                  width: 100%;
+
+                  &.email, &.address {
+                    padding-top: 10px;
+                  }
+                }
               }
             }
 
@@ -854,15 +781,61 @@
     }
   }
 
-  .sec-teams {
-    
+  .sec-project {
     .tabs {
-
       .tabs-nav {
+        height: 40px;
+
         li {
+          min-width: 0;
+          width: 100%;
+
           a {
-            span {
-              display: none;
+            line-height: 38px;
+            font-size: 14px;
+          }
+        }
+      }
+      .tabs-content {
+        .tab-common {
+
+          &.active {
+            min-height: auto;
+          }
+
+          .project-list {
+            .list-item {
+              width: 100%;
+
+              p {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .sec-work {
+
+    .contentSlide {
+
+      .swiper-slide {
+
+        .work-cont {
+          min-height: 0;
+
+          .buttonInner {
+            position: static;
+            padding-top: 40px;
+
+            & > * {
+              min-width: auto;
+              width: calc(50% - 5px);
+              height: 40px;
+              line-height: 38px;
+              font-size: 14px;
             }
           }
         }

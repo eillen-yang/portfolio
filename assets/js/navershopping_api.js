@@ -6,7 +6,6 @@ const find_movie = function (form) {
     alert("원하시는 상품을 입력해주세요!!");
     return false;
   }
-
   $.ajax({
     url: "./functions/naverapi.php",
     type: "POST",
@@ -20,6 +19,7 @@ const find_movie = function (form) {
     },
     success: function (data) {
       const result = data.items;
+      console.log(data);
       console.log(result);
       console.log(result.length);
 

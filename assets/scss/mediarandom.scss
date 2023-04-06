@@ -1,0 +1,178 @@
+/*태블릿 디바이스 (가로 해상도가 992px 보다 작은 화면에 적용)  */
+@media (max-width: 991px) {
+  .sec-teams {
+
+    .tabs {
+    
+      .tabs-nav {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 100%;
+
+        li {
+          margin-right: 12px;
+          width: 33.33%;
+
+          a {
+            min-width: 100%;
+            height: 48px;
+            line-height: 48px;
+          }
+        }
+      }
+
+      .tabs-content {
+        margin-top: 18px;
+
+        .tab-common {
+          min-width: 100%;
+
+          .list-items {
+            display: inline-flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            width: 100%;
+
+            li {
+              padding: 12px;
+              margin-left: 18px;
+              width: calc(33.33% - 12px);
+
+              &:nth-child(-n+3) {
+                margin-bottom: 18px;
+              }
+              &:first-child, &:nth-child(4) {
+                margin-left: 0;
+              }
+            }
+          }
+
+          .teams-desc {
+            margin-bottom: 18px;
+            padding: 6px 12px;
+            min-width: 100%;
+            border-radius: 4px;
+
+            .team-desc-inner {
+              padding-right: 20px;
+              font-size: 14px;
+
+              .tit {
+                font-weight: 400;
+              }
+              .con {
+                font-weight: 600;
+              }
+            }
+          }
+
+          .item {
+            padding: 15px 10px;
+
+            .item-thumb {
+              width: 70px;
+              height: 70px;
+            }
+
+            .item-data {
+              padding-top: 15px;
+
+              .gender {
+                padding-top: 5px;
+              }
+
+              .item-icon {
+                margin-top: 5px;
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+    .teams-caution {
+      padding-top: 20px;
+    }
+  }
+}
+
+
+/* 가로모드 모바일 디바이스 (가로 해상도가 768px 보다 작은 화면에 적용)  */
+@media (max-width: 767px) {
+  .sec-teams {
+    .tabs {
+
+      .tabs-content {
+        margin-top: 12px;
+
+        .tab-common {
+
+          .list-items {
+
+            li {
+              width: calc(50% - 6px);
+
+              &:nth-child(3) {
+                margin-bottom: 0;
+                margin-left: 0;
+              }
+
+              &:nth-child(-n+2) {
+                margin-bottom: 12px;
+              }
+
+              &:nth-child(2n) {
+                margin-left: 12px;
+              }
+            }
+          }
+
+          .teams-desc {
+            margin-bottom: 12px;
+
+            .team-desc-inner {
+              font-size: 13px;
+            }
+          }
+
+          .item {
+
+            .item-data {
+              padding-top: 10px;
+
+              .item-icon {
+                margin-top: 0;
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .teams-caution {
+      padding-top: 12px;
+      font-size: 12px;
+    }
+  }
+}
+
+
+/* 세로모드 모바일 디바이스 (가로 해상도가 576px 보다 작은 화면에 적용) */
+@media (max-width: 575px) {
+  .sec-teams {
+    .tabs {
+      .tabs-nav {
+        li {
+          a {
+            span {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
