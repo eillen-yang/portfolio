@@ -1,531 +1,760 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
-	<!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"
+    />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
 
-	<title>Eille Portfolio</title>
+    <title>Eille Portfolio</title>
 
-	<!-- css -->
-	<link rel="stylesheet" href="./assets/css/reset.min.css">
-	<link rel="stylesheet" href="./assets/css/core.min.css">
-	<link rel="stylesheet" href="./assets/css/mediacore.min.css">
-	<link rel="stylesheet" href="./assets/css/top-link.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/reset.min.css" />
+    <link rel="stylesheet" href="./assets/css/core.min.css" />
+    <link rel="stylesheet" href="./assets/css/mediacore.min.css" />
+    <link rel="stylesheet" href="./assets/css/top-link.min.css" />
 
-	<!-- vendor -->
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- vendor -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
 
-	<!-- fonts -->
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-</head>
+  <body>
+    <div id="wrap">
+      <header id="header">
+        <div class="container">
+          <h1 class="title"><a href="/">YangAReum</a></h1>
 
-<body>
-	<div id="wrap">
-		<header id="header">
-			<div class="container">
-				<h1 class="title"><a href="/">Eille</a></h1>
+          <ul class="nav">
+            <li class="navList"><a href="#introduce">Introduce</a></li>
+            <li class="navList"><a href="#project">Project</a></li>
+            <li class="navList"><a href="#work">work</a></li>
+            <li class="navList"><a href="#contactus">Contact Us</a></li>
+          </ul>
 
-				<ul class="nav">
-					<li class="navList"><a href="#introduce">Introduce</a></li>
-					<li class="navList"><a href="#project">Project</a></li>
-					<li class="navList"><a href="#work">work</a></li>
-					<li class="navList"><a href="#contactus">Contact Us</a></li>
-				</ul>
+          <div class="mobile-nav">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
+          </div>
+        </div>
+      </header>
 
-				<div class="mobile-nav">
-					<span class="bar1"></span>
-					<span class="bar2"></span>
-					<span class="bar3"></span>
-				</div>
-			</div>
-		</header>
+      <main id="main">
+        <section class="sec-slider">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" data-header-theme="light">
+                <div class="container">
+                  <div class="slideCont sec01">
+                    <div class="sec01-left">
+                      <div class="sec01-img">
+                        <img
+                          src="./assets/images/sec-slider01-vetor.png"
+                          alt="banner-myimg"
+                        />
+                      </div>
+                      <p class="sec01-text">PORT<br />FOLIO</p>
+                    </div>
+                    <div class="sec01-right">
+                      <p class="sec01-intro">
+                        HELLO I AM<br />FRONT-END DEVELOPER.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-		<main id="main">
-			<section class="sec-slider">
-				<div class="swiper-container">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide" data-header-theme="light">
-							<div class="container">
-								<div class="slideCont sec01">
-									<div class="sec01-left">
-										<div class="sec01-img">
-											<img src="./assets/images/sec-slider01-vetor.png" alt="banner-myimg">
-										</div>
-										<p class="sec01-text">PORT<br>FOLIO</p>
-									</div>
-									<div class="sec01-right">
-										<p class="sec01-intro">HELLO I AM<br>FRONT-END DEVELOPER.</p>
-									</div>
-								</div>
-							</div>
-						</div>
+              <div class="swiper-slide" data-header-theme="light">
+                <div class="container">
+                  <div class="slideCont sec02">
+                    <div class="sec02-left">
+                      <span class="sect-subtitle">
+                        <strong>Front-end</strong>
+                        Developer
+                      </span>
+                      <span class="sect-title01">양아름</span>
+                      <span class="sect-title02">입니다.</span>
+                    </div>
+                    <div class="sec02-right">
+                      <p class="sent-intro">
+                        실무경험을 토대로 많이 사용하는 기능들을 적용시켰습니다.
+                      </p>
+                      <span class="sent-text"
+                        >HTML5, CSS3, SCSS, jquery, javascript, API</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-						<div class="swiper-slide" data-header-theme="light">
-							<div class="container">
-								<div class="slideCont sec02">
-									<div class="sec02-left">
-										<span class="sect-subtitle">
-											<strong>Front-end</strong>
-											Developer
-										</span>
-										<span class="sect-title01">양아름</span>
-										<span class="sect-title02">입니다.</span>
-									</div>
-									<div class="sec02-right">
-										<p class="sent-intro">실무경험을 토대로 많이 사용하는 기능들을 적용시켰습니다.</p>
-										<span class="sent-text">HTML5, CSS3, SCSS, jquery, javascript, API</span>
-									</div>
-								</div>
-							</div>
-						</div>
+              <div class="swiper-slide" data-header-theme="light">
+                <div class="container">
+                  <div class="slideCont sec03">
+                    <span class="pointText">#가보자고</span>
+                    <span class="pointText">#해보자고</span>
+                    <span class="pointText">#즐기자고</span>
+                  </div>
+                </div>
+              </div>
 
-						<div class="swiper-slide" data-header-theme="light">
-							<div class="container">
-								<div class="slideCont sec03">
-									<span class="pointText">#가보자고</span>
-									<span class="pointText">#해보자고</span>
-									<span class="pointText">#즐기자고</span>
-								</div>
-							</div>
-						</div>
+              <div class="swiper-slide" data-header-theme="dark"></div>
+            </div>
+          </div>
+        </section>
 
-						<div class="swiper-slide" data-header-theme="dark"></div>
-					</div>
-				</div>
-			</section>
+        <article id="sec-introduce" class="sec sec-introduce">
+          <div class="container">
+            <!-- <h2 class="title">Introduce</h2> -->
+            <div class="tabs">
+              <ul class="tabs-nav">
+                <li><a href="#tab01" class="active">Profile</a></li>
+                <li><a href="#tab02">Mind Map</a></li>
+              </ul>
+              <div class="tabs-content">
+                <div class="tab-common tab01 active">
+                  <div class="myBox">
+                    <img
+                      src="./assets/images/my_photo.jpg"
+                      class="myPhoto"
+                      alt="my_photo"
+                    />
 
-			<article id="sec-introduce" class="sec sec-introduce">
-				<div class="container">
-					<h2 class="title">Introduce</h2>
-					<div class="tabs">
-						<ul class="tabs-nav">
-							<li><a href="#tab01" class="active">Profile</a></li>
-							<li><a href="#tab02">Mind Map</a></li>
-						</ul>
-						<div class="tabs-content">
-							<div class="tab-common tab01 active">
-								<div class="myBox">
-									<img src="./assets/images/my_photo.jpg" class="myPhoto" alt="my_photo">
+                    <div class="mybox-item">
+                      <div class="intro-item name">
+                        <span class="intro-tit">이름</span>
+                        <p class="intro-cont">양아름</p>
+                      </div>
+                      <div class="intro-item phone">
+                        <span class="intro-tit">휴대폰 번호</span>
+                        <p class="intro-cont">010-7663-2800</p>
+                      </div>
+                      <div class="intro-item email">
+                        <span class="intro-tit">이메일</span>
+                        <p class="intro-cont">yangareum0130@gmail.com</p>
+                      </div>
+                      <div class="intro-item address">
+                        <span class="intro-tit">거주지</span>
+                        <p class="intro-cont">
+                          경기도 성남 (8호선 단대오거리 5분거리)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-common tab02">
+                  <img src="/assets/images/mindmap.jpg" alt="my-mindmap" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
 
-									<div class="mybox-item">
-										<div class="intro-item name">
-											<span class="intro-tit">이름</span>
-											<p class="intro-cont">양아름</p>
-										</div>
-										<div class="intro-item phone">
-											<span class="intro-tit">휴대폰 번호</span>
-											<p class="intro-cont">010-7663-2800</p>
-										</div>
-										<div class="intro-item email">
-											<span class="intro-tit">이메일</span>
-											<p class="intro-cont">yangareum0130@gmail.com</p>
-										</div>
-										<div class="intro-item address">
-											<span class="intro-tit">거주지</span>
-											<p class="intro-cont">경기도 성남 (8호선 단대오거리 5분거리)</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="tab-common tab02">
-								<img src="/assets/images/mindmap.jpg" alt="my-mindmap">
-							</div>
-						</div>
-					</div>
-				</div>
-			</article>
+        <article id="sec-project" class="sec sec-project">
+          <div class="container">
+            <h2 class="title">project</h2>
 
-			<article id="sec-project" class="sec sec-project">
-				<div class="container">
-					<h2 class="title">project</h2>
+            <div class="tabs">
+              <ul class="tabs-nav">
+                <li><a href="#tab01" class="active">프로젝트</a></li>
+                <li><a href="#tab02">Study</a></li>
+              </ul>
 
-					<div class="tabs">
-						<ul class="tabs-nav">
-							<li><a href="#tab01" class="active">프로젝트</a></li>
-							<li><a href="#tab02">Javascript 학습</a></li>
-						</ul>
+              <div class="tabs-content">
+                <!-- 프로젝트 -->
+                <div class="tab-common tab01 active">
+                  <ul class="project-list">
+                    <li class="list-item">
+                      <div class="view">
+                        <div class="front">
+                          <img
+                            src="/assets/images/tour_route.png"
+                            alt="project-todolist"
+                          />
+                        </div>
+                        <div class="back">
+                          <a
+                            href="https://tour-route.vercel.app/"
+                            class="icon"
+                            target="_blank"
+                            >보러가기</a
+                          >
+                          <a
+                            href="https://github.com/yangareum1818/FE_TourRoute"
+                            target="_blank"
+                            class="icon"
+                            >리뷰보기</a
+                          >
+                        </div>
+                      </div>
+                      <div class="item-stack">
+                        <span class="stack">React</span>
+                        <span class="stack">Styled-Components</span>
+                        <span class="stack">Redux-Toolkit</span>
+                      </div>
+                      <p>
+                        [TourRoute] 경상도 지역의 여행지를 추천받고,
+                        커뮤니티에서 동행인도 만날 수 있는 간편한 여행의 시작
+                      </p>
+                    </li>
+                    <li class="list-item">
+                      <div class="view">
+                        <div class="front">
+                          <img
+                            src="/assets/images/sec-project-todolist.png"
+                            alt="project-todolist"
+                          />
+                        </div>
+                        <div class="back">
+                          <a
+                            href="/project/todolist/index.html"
+                            class="icon"
+                            target="_blank"
+                            >보러가기</a
+                          >
+                          <a
+                            href="https://github.com/yangareum1818/todo-list"
+                            target="_blank"
+                            class="icon"
+                            >리뷰보기</a
+                          >
+                        </div>
+                      </div>
+                      <div class="item-stack">
+                        <span class="stack">HTML5</span>
+                        <span class="stack">CSS3</span>
+                        <span class="stack">Javascript</span>
+                      </div>
+                      <p>
+                        [TodoList] 로컬스토리지를 이용해 Javascript로 TODOLIST를
+                        만들어 보았습니다.
+                      </p>
+                    </li>
 
-						<div class="tabs-content">
-							<!-- 프로젝트 -->
-							<div class="tab-common tab01 active">
-								<ul class="project-list">
-									<li class="list-item">
-										<div class="view">
-											<div class="front">
-												<img src="/assets/images/sec-project-todolist.png" alt="project-todolist">
-											</div>
-											<div class="back">
-												<a href="/project/todolist/index.html" class="icon" target="_blank">보러가기</a>
-												<a href="https://github.com/yangareum1818/todo-list" target="_blank" class="icon">리뷰보기</a>
-											</div>
-										</div>
-										<div class="item-stack">
-											<span class="stack">HTML5</span>
-											<span class="stack">CSS3</span>
-											<span class="stack">Javascript</span>
-										</div>
-										<p>로컬스토리지를 이용해 Javascript로 TODOLIST를 만들어 보았습니다.</p>
-									</li>
+                    <li class="list-item">
+                      <div class="view">
+                        <div class="front">
+                          <img
+                            src="/assets/images/sec-project-portfolio.png"
+                            alt="personal work-icon"
+                          />
+                        </div>
+                        <div class="back">
+                          <a
+                            href="http://mm2800.dothome.co.kr/portfolio/port/index3.html"
+                            class="icon"
+                            target="_blank"
+                            >보러가기</a
+                          >
+                        </div>
+                      </div>
+                      <div class="item-stack">
+                        <span class="stack">HTML5</span>
+                        <span class="stack">CSS3</span>
+                        <span class="stack">Javascript</span>
+                      </div>
+                      <p>
+                        [Portfolio] 웹을 공부하며 제작했던 사이트들을 공부하며
+                        제작했던 사이트들을 모아, 첫 번째 Portfolio로
+                        제작했습니다.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
 
-									<li class="list-item">
-										<div class="view">
-											<div class="front">
-												<img src="/assets/images/sec-project-naver-api.jpeg" alt="api-icon">
-											</div>
-											<div class="back">
-												<a href="/project/naver_api/navershopping.html" class="icon" target="_blank">보러가기</a>
-											</div>
-										</div>
-										<div class="item-stack">
-											<span class="stack">HTML5</span>
-											<span class="stack">CSS3</span>
-											<span class="stack">Javascript</span>
-											<span class="stack">API</span>
-										</div>
-										<p>Naver Api를 이용하여 서버와 통신하여 수신한 데이터로 쇼핑 검색 기능을 제작했습니다.</p>
-									</li>
+                <!-- JS 학습 -->
+                <div class="tab-common tab02">
+                  <ul class="project-list">
+                    <li class="list-item">
+                      <div class="view">
+                        <div class="front">
+                          <img
+                            src="/assets/images/sec-project-naver-api.jpeg"
+                            alt="api-icon"
+                          />
+                        </div>
+                        <div class="back">
+                          <a
+                            href="/project/naver_api/navershopping.html"
+                            class="icon"
+                            target="_blank"
+                            >보러가기</a
+                          >
+                        </div>
+                      </div>
+                      <div class="item-stack">
+                        <span class="stack">HTML5</span>
+                        <span class="stack">CSS3</span>
+                        <span class="stack">Javascript</span>
+                        <span class="stack">API</span>
+                      </div>
+                      <p>
+                        [비동기를 활용한 API Study] Naver API를 이용하여 서버와
+                        통신하여 수신한 데이터로 쇼핑 검색 기능을 제작했습니다.
+                      </p>
+                    </li>
 
-									<li class="list-item">
-										<div class="view">
-											<div class="front">
-												<img src="/assets/images/sec-project-random-api.png" alt="random-api">
-											</div>
-											<div class="back">
-												<a href="/project/random_api/index.html" class="icon" target="_blank">보러가기</a>
-											</div>
-										</div>
-										<div class="item-stack">
-											<span class="stack">HTML5</span>
-											<span class="stack">CSS3</span>
-											<span class="stack">Javascript</span>
-											<span class="stack">API</span>
-										</div>
-										<p>랜덤 API를 활용해 user의 정보를 랜덤으로 사용자에게 보여주는 작업물을 만들어 보았습니다.</p>
-									</li>
+                    <li class="list-item">
+                      <div class="view">
+                        <div class="front">
+                          <img
+                            src="/assets/images/sec-project-random-api.png"
+                            alt="random-api"
+                          />
+                        </div>
+                        <div class="back">
+                          <a
+                            href="/project/random_api/index.html"
+                            class="icon"
+                            target="_blank"
+                            >보러가기</a
+                          >
+                        </div>
+                      </div>
+                      <div class="item-stack">
+                        <span class="stack">HTML5</span>
+                        <span class="stack">CSS3</span>
+                        <span class="stack">Javascript</span>
+                        <span class="stack">API</span>
+                      </div>
+                      <p>
+                        [비동기를 활용한 API] 랜덤 API를 활용해 user의 정보를
+                        랜덤으로 사용자에게 보여주는 작업물을 만들어 보았습니다.
+                      </p>
+                    </li>
 
-									<li class="list-item">
-										<div class="view">
-											<div class="front">
-												<img src="/assets/images/sec-project-portfolio.png" alt="personal work-icon">
-											</div>
-											<div class="back">
-												<a href="http://mm2800.dothome.co.kr/portfolio/port/index3.html" class="icon" target="_blank">보러가기</a>
-											</div>
-										</div>
-										<div class="item-stack">
-											<span class="stack">HTML5</span>
-											<span class="stack">CSS3</span>
-											<span class="stack">Javascript</span>
-										</div>
-										<p>웹을 공부하며 제작했던 사이트들을 공부하며 제작했던 사이트들을 모아, Portfolio로 제작했습니다.</p>
-									</li>
-								</ul>
-							</div>
+                    <li class="list-item">
+                      <div class="view">
+                        <div class="front">
+                          <img
+                            src="/assets/images/javascript-logo.jpg"
+                            alt="javascript-learning"
+                          />
+                        </div>
+                        <div class="back">
+                          <a
+                            href="/project/js_learning/index.html"
+                            class="icon"
+                            target="_blank"
+                            >보러가기</a
+                          >
+                          <a
+                            href="https://github.com/yangareum1818/javascript-study"
+                            class="icon"
+                            target="_blank"
+                            >리뷰보기</a
+                          >
+                        </div>
+                      </div>
+                      <div class="item-stack">
+                        <span class="stack">Javascript</span>
+                      </div>
+                      <p>
+                        [Javascript 기본개념과 동작원리] Javascript를
+                        이해하기위한 간단한 예제를 샘플링한 학습입니다.<br />앞으로
+                        계속 추가 해 나갈 예정입니다.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
 
-							<!-- JS 학습 -->
-							<div class="tab-common tab02">
-								<ul class="project-list">
-									<li class="list-item">
-										<div class="view">
-											<div class="front">
-												<img src="/assets/images/javascript-logo.jpg" alt="javascript-learning">
-											</div>
-											<div class="back">
-												<a href="/project/js_learning/index.html" class="icon" target="_blank">보러가기</a>
-												<a href="https://github.com/yangareum1818/javascript-study" class="icon" target="_blank">리뷰보기</a>
-											</div>
-										</div>
-										<div class="item-stack">
-											<span class="stack">Javascript</span>
-										</div>
-										<p>Javascript를 기본개념과 동작원리를 이해하기위한 간단한 예제를 샘플링한 학습입니다.<br/>앞으로 계속 추가 해 나갈 예정입니다.</p>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-			</article>
+        <article id="sec-work" class="sec sec-work">
+          <div class="container">
+            <h2 class="title">Work</h2>
 
-			<article id="sec-work" class="sec sec-work">
-				<div class="container">
-					<h2 class="title">Work</h2>
+            <div class="swiper-container thumbnailImg">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide s-slide01"></div>
+                <div class="swiper-slide s-slide02"></div>
+                <div class="swiper-slide s-slide03"></div>
+                <div class="swiper-slide s-slide04"></div>
+                <div class="swiper-slide s-slide05"></div>
+              </div>
+              <div class="slide-button next"></div>
+              <div class="slide-button prev"></div>
+            </div>
 
-					<div class="swiper-container thumbnailImg">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide s-slide01"></div>
-							<div class="swiper-slide s-slide02"></div>
-							<div class="swiper-slide s-slide03"></div>
-							<div class="swiper-slide s-slide04"></div>
-							<div class="swiper-slide s-slide05"></div>
-						</div>
-						<div class="slide-button next"></div>
-						<div class="slide-button prev"></div>
-					</div>
-					
-					<div class="swiper-container contentSlide">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="b-slide b-slidImg01"></div>
+            <div class="swiper-container contentSlide">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="b-slide b-slidImg01"></div>
 
-								<div class="work-cont">
-									<span class="work-tit">[P2P] PIECE</span>
+                  <div class="work-cont">
+                    <span class="work-tit">[P2P] PIECE</span>
 
-									<div class="work-info-container">
-										<div class="work-info">
-											<span class="tit">작업인원</span>
-											<span class="desc">3명 ~ 4명</span>
-										</div>
-										<div class="work-info">
-											<span class="tit">작업참여율</span>
-											<span class="desc">30%</span>
-										</div>
-										<div class="work-info">
-											<span class="tit">작업기간</span>
-											<span class="desc">2021.01 ~ 2021.03</span>
-										</div>
-									</div>
+                    <div class="work-info-container">
+                      <div class="work-info">
+                        <span class="tit">작업인원</span>
+                        <span class="desc">3명 ~ 4명</span>
+                      </div>
+                      <div class="work-info">
+                        <span class="tit">작업참여율</span>
+                        <span class="desc">30%</span>
+                      </div>
+                      <div class="work-info">
+                        <span class="tit">작업기간</span>
+                        <span class="desc">2021.01 ~ 2021.03</span>
+                      </div>
+                    </div>
 
-									<div class="work-info">
-										<span class="tit">작업페이지</span>
-										<span class="desc">고객지원, 문의하기, 회원가입, 마이페이지(개인/법인 : 예치금관리)</span>
-									</div>
-									<div class="work-info">
-										<span class="tit">프로젝트 설명</span>
-										<span class="desc">현물의 상승세를 경험하는 내 생애 첫 번째 조각투자 플랫폼 'PIECE'</span>
-									</div>
+                    <div class="work-info">
+                      <span class="tit">작업페이지</span>
+                      <span class="desc"
+                        >고객지원, 문의하기, 회원가입, 마이페이지(개인/법인 :
+                        예치금관리)</span
+                      >
+                    </div>
+                    <div class="work-info">
+                      <span class="tit">프로젝트 설명</span>
+                      <span class="desc"
+                        >현물의 상승세를 경험하는 내 생애 첫 번째 조각투자
+                        플랫폼 'PIECE'</span
+                      >
+                    </div>
 
-									<div class="buttonInner">
-										<a href="./assets/images/pdf/pdf01.png" class="img-open" target="_blank">pdf Img</a>
-										<a href="https://www.piece.run/" class="icon-link" target="_blank">홈페이지 이동</a>
-									</div>
-								</div>
-							</div>
+                    <div class="buttonInner">
+                      <a
+                        href="./assets/images/pdf/pdf01.png"
+                        class="img-open"
+                        target="_blank"
+                        >pdf Img</a
+                      >
+                      <a
+                        href="https://www.piece.run/"
+                        class="icon-link"
+                        target="_blank"
+                        >홈페이지 이동</a
+                      >
+                    </div>
+                  </div>
+                </div>
 
-							<div class="swiper-slide">
-								<div class="b-slide b-slidImg02"></div>
-								<div class="work-cont">
-									<span class="work-tit">[일반사이트] 한국이용사회중앙회</span>
+                <div class="swiper-slide">
+                  <div class="b-slide b-slidImg02"></div>
+                  <div class="work-cont">
+                    <span class="work-tit"
+                      >[일반사이트] 한국이용사회중앙회</span
+                    >
 
-									<div class="work-info-container">
-										<div class="work-info">
-											<span class="tit">작업인원</span>
-											<span class="desc">2명</span>
-										</div>
-										<div class="work-info">
-											<span class="tit">작업참여율</span>
-											<span class="desc">50%</span>
-										</div>
-										<div class="work-info">
-											<span class="tit">작업기간</span>
-											<span class="desc">2021.04</span>
-										</div>
-									</div>
+                    <div class="work-info-container">
+                      <div class="work-info">
+                        <span class="tit">작업인원</span>
+                        <span class="desc">2명</span>
+                      </div>
+                      <div class="work-info">
+                        <span class="tit">작업참여율</span>
+                        <span class="desc">50%</span>
+                      </div>
+                      <div class="work-info">
+                        <span class="tit">작업기간</span>
+                        <span class="desc">2021.04</span>
+                      </div>
+                    </div>
 
-									<div class="work-info">
-										<span class="tit">작업페이지</span>
-										<span class="desc">로그인, 회원가입, 고객센터(공지사항 자료실 문의게시판 이용가이드), 내강의실(수료증 발급, 회원정보수정)</span>
-									</div>
-									<div class="work-info">
-										<span class="tit">프로젝트 설명</span>
-										<span class="desc">고령인들이 이용업소의 취업을 위해 필요한 정보, 강의, 자격증 등을 이용할 수 있도록 만들어진 사이트입니다.</span>
-									</div>
-									<div class="buttonInner">
-										<a href="./assets/images/pdf/pdf02.png" class="img-open" target="_blank">PDF Img</a>
-										<a href="https://kbcabarber.or.kr/" class="icon-link" target="_blank">홈페이지 이동</a>
-									</div>
-								</div>
-							</div>
+                    <div class="work-info">
+                      <span class="tit">작업페이지</span>
+                      <span class="desc"
+                        >로그인, 회원가입, 고객센터(공지사항 자료실 문의게시판
+                        이용가이드), 내강의실(수료증 발급, 회원정보수정)</span
+                      >
+                    </div>
+                    <div class="work-info">
+                      <span class="tit">프로젝트 설명</span>
+                      <span class="desc"
+                        >고령인들이 이용업소의 취업을 위해 필요한 정보, 강의,
+                        자격증 등을 이용할 수 있도록 만들어진
+                        사이트입니다.</span
+                      >
+                    </div>
+                    <div class="buttonInner">
+                      <a
+                        href="./assets/images/pdf/pdf02.png"
+                        class="img-open"
+                        target="_blank"
+                        >PDF Img</a
+                      >
+                      <a
+                        href="https://kbcabarber.or.kr/"
+                        class="icon-link"
+                        target="_blank"
+                        >홈페이지 이동</a
+                      >
+                    </div>
+                  </div>
+                </div>
 
-							<div class="swiper-slide">
-								<div class="b-slide b-slidImg03"></div>
-								<div class="work-cont">
-									<span class="work-tit">[일반사이트] 삼두</span>
+                <div class="swiper-slide">
+                  <div class="b-slide b-slidImg03"></div>
+                  <div class="work-cont">
+                    <span class="work-tit">[일반사이트] 삼두</span>
 
-									<div class="work-info-container">
-										<div class="work-info">
-											<span class="tit">작업인원</span>
-											<span class="desc">1 ~ 2명</span>
-										</div>
-										<div class="work-info">
-											<span class="tit">작업참여율</span>
-											<span class="desc">90%</span>
-										</div>
-										<div class="work-info">
-											<span class="tit">작업기간</span>
-											<span class="desc">2021.07</span>
-										</div>
-									</div>
+                    <div class="work-info-container">
+                      <div class="work-info">
+                        <span class="tit">작업인원</span>
+                        <span class="desc">1 ~ 2명</span>
+                      </div>
+                      <div class="work-info">
+                        <span class="tit">작업참여율</span>
+                        <span class="desc">90%</span>
+                      </div>
+                      <div class="work-info">
+                        <span class="tit">작업기간</span>
+                        <span class="desc">2021.07</span>
+                      </div>
+                    </div>
 
-									<div class="work-info">
-										<span class="tit">작업페이지</span>
-										<span class="desc">메인, 공지사항 제외 모든작업</span>
-									</div>
-									<div class="work-info">
-										<span class="tit">프로젝트 설명</span>
-										<span class="desc">섬유의 전처리에서부터 염색, 가공에 이르기까지 전반적인 계면활성제를 생산/판매하는 사이트입니다.</span>
-									</div>
-									<div class="buttonInner">
-										<a href="https://www.samdoo32.com/" class="icon-link" target="_blank">홈페이지 이동</a>
-									</div>
-								</div>
-							</div>
+                    <div class="work-info">
+                      <span class="tit">작업페이지</span>
+                      <span class="desc">메인, 공지사항 제외 모든작업</span>
+                    </div>
+                    <div class="work-info">
+                      <span class="tit">프로젝트 설명</span>
+                      <span class="desc"
+                        >섬유의 전처리에서부터 염색, 가공에 이르기까지 전반적인
+                        계면활성제를 생산/판매하는 사이트입니다.</span
+                      >
+                    </div>
+                    <div class="buttonInner">
+                      <a
+                        href="https://www.samdoo32.com/"
+                        class="icon-link"
+                        target="_blank"
+                        >홈페이지 이동</a
+                      >
+                    </div>
+                  </div>
+                </div>
 
-							<div class="swiper-slide">
-								<div class="b-slide b-slidImg04"></div>
-								<div class="work-cont">
-									<span class="work-tit">[일반사이트] 루이랩 LUILAB</span>
+                <div class="swiper-slide">
+                  <div class="b-slide b-slidImg04"></div>
+                  <div class="work-cont">
+                    <span class="work-tit">[일반사이트] 루이랩 LUILAB</span>
 
-									<div class="work-info-container">
-										<div class="work-info">
-											<span class="tit">작업인원</span>
-											<span class="desc">2명</span>
-										</div>
-										<div class="work-info">
-											<span class="tit">작업참여율</span>
-											<span class="desc">60%</span>
-										</div>
-										<div class="work-info">
-											<span class="tit">작업기간</span>
-											<span class="desc">2021.05</span>
-										</div>
-									</div>
+                    <div class="work-info-container">
+                      <div class="work-info">
+                        <span class="tit">작업인원</span>
+                        <span class="desc">2명</span>
+                      </div>
+                      <div class="work-info">
+                        <span class="tit">작업참여율</span>
+                        <span class="desc">60%</span>
+                      </div>
+                      <div class="work-info">
+                        <span class="tit">작업기간</span>
+                        <span class="desc">2021.05</span>
+                      </div>
+                    </div>
 
-									<div class="work-info">
-										<span class="tit">작업페이지</span>
-										<span class="desc">Header, About, Portfolio, Contact Us</span>
-									</div>
-									<div class="work-info">
-										<span class="tit">프로젝트 설명</span>
-										<span class="desc">웹 에이전시 사이트입니다.</span>
-									</div>
-									<div class="buttonInner">
-										<a href="./assets/images/luilab.zip" class="img-open" download="luilab-design">DOWNLOAD</a>
-										<a href="https://luilab.kr" class="icon-link" target="_blank">홈페이지 이동</a>
-									</div>
-								</div>
-							</div>
+                    <div class="work-info">
+                      <span class="tit">작업페이지</span>
+                      <span class="desc"
+                        >Header, About, Portfolio, Contact Us</span
+                      >
+                    </div>
+                    <div class="work-info">
+                      <span class="tit">프로젝트 설명</span>
+                      <span class="desc">웹 에이전시 사이트입니다.</span>
+                    </div>
+                    <div class="buttonInner">
+                      <a
+                        href="./assets/images/luilab.zip"
+                        class="img-open"
+                        download="luilab-design"
+                        >DOWNLOAD</a
+                      >
+                      <a
+                        href="https://luilab.kr"
+                        class="icon-link"
+                        target="_blank"
+                        >홈페이지 이동</a
+                      >
+                    </div>
+                  </div>
+                </div>
 
-							<div class="swiper-slide">
-								<div class="b-slide b-slidImg05"></div>
-								<div class="work-cont">
-									<span class="work-tit">[일반사이트] 온라인 투표</span>
+                <div class="swiper-slide">
+                  <div class="b-slide b-slidImg05"></div>
+                  <div class="work-cont">
+                    <span class="work-tit">[일반사이트] 온라인 투표</span>
 
-									<div class="work-info-container">
-										<div class="work-info">
-											<span class="tit">작업인원</span>
-											<span class="desc">1명</span>
-										</div>
-										<div class="work-info">
-											<span class="tit">작업참여율</span>
-											<span class="desc">100%</span>
-										</div>
-										<div class="work-info">
-											<span class="tit">작업기간</span>
-											<span class="desc">2021.06</span>
-										</div>
-									</div>
+                    <div class="work-info-container">
+                      <div class="work-info">
+                        <span class="tit">작업인원</span>
+                        <span class="desc">1명</span>
+                      </div>
+                      <div class="work-info">
+                        <span class="tit">작업참여율</span>
+                        <span class="desc">100%</span>
+                      </div>
+                      <div class="work-info">
+                        <span class="tit">작업기간</span>
+                        <span class="desc">2021.06</span>
+                      </div>
+                    </div>
 
-									<div class="work-info">
-										<span class="tit">작업페이지</span>
-										<span class="desc">One Page</span>
-									</div>
-									<div class="work-info">
-										<span class="tit">프로젝트 설명</span>
-										<span class="desc">여러지자체에서 투표가 필요로할 때, 이용가능 하게끔 투표 사이트를 샘플링 되어 만들어진 사이트입니다.</span>
-									</div>
-									<div class="buttonInner">
-										<a href="./assets/images/pdf/pdf05.jpg" class="img-open" target="_blank">PDF Img</a>
-										<a href="https://online-voting.13100m.net/" class="icon-link" target="_blank">홈페이지 이동</a>
-									</div>
-								</div>
-							</div>
+                    <div class="work-info">
+                      <span class="tit">작업페이지</span>
+                      <span class="desc">One Page</span>
+                    </div>
+                    <div class="work-info">
+                      <span class="tit">프로젝트 설명</span>
+                      <span class="desc"
+                        >여러지자체에서 투표가 필요로할 때, 이용가능 하게끔 투표
+                        사이트를 샘플링 되어 만들어진 사이트입니다.</span
+                      >
+                    </div>
+                    <div class="buttonInner">
+                      <a
+                        href="./assets/images/pdf/pdf05.jpg"
+                        class="img-open"
+                        target="_blank"
+                        >PDF Img</a
+                      >
+                      <a
+                        href="https://online-voting.13100m.net/"
+                        class="icon-link"
+                        target="_blank"
+                        >홈페이지 이동</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="caution"
+              >※ 기간이 오래 지난 프로젝트는 클라이언트에 의해 사이트가 리뉴얼
+              되었거나 운영이 종료됐을 수 있습니다.</span
+            >
+          </div>
+        </article>
 
-						</div>
-					</div>
-					<span class="caution">※ 기간이 오래 지난 프로젝트는 클라이언트에 의해 사이트가 리뉴얼 되었거나 운영이 종료됐을 수 있습니다.</span>
-				</div>
-			</article>
+        <article id="sec-contactus" class="sec sec-contactus">
+          <div class="container">
+            <div class="contact">
+              <div class="contact-vector">
+                <img
+                  src="./assets/images/sec-contact-vector.png"
+                  alt="contact-vector-img"
+                />
+              </div>
+              <form class="form" onsubmit="return sendRequest(this);">
+                <fieldset>
+                  <legend class="blind">구인 제한</legend>
+                  <div class="inputInner">
+                    <label for="username">Company or Your-name</label>
+                    <input
+                      type="text"
+                      name="username"
+                      id="username"
+                      placeholder="당신의 회사 또는 이름을 적어주세요."
+                    />
+                  </div>
+                  <div class="inputInner">
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="mail"
+                      maxlength="30"
+                      placeholder="이메일 형식을 준수해 적어주세요."
+                    />
+                  </div>
+                  <div class="inputInner">
+                    <label for="message">Messages</label>
+                    <textarea
+                      name="message"
+                      id="message"
+                      cols="30"
+                      rows="10"
+                      placeholder="저에게 전할 메세지를 보내주세요."
+                    ></textarea>
+                  </div>
+                  <div class="send_btn">
+                    <button type="submit">
+                      Send Request <i class="far fa-paper-plane"></i>
+                    </button>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </article>
+      </main>
 
-			<article id="sec-contactus" class="sec sec-contactus">
-				<div class="container">
-					<div class="contact">
-						<div class="contact-vector">
-							<img src="./assets/images/sec-contact-vector.png" alt="contact-vector-img">
-						</div>
-						<form class="form" onsubmit="return sendRequest(this);">
-							<fieldset>
-								<legend class="blind">구인 제한</legend>
-								<div class="inputInner">
-									<label for="username">Company or Your-name</label>
-									<input type="text" name="username" id="username" placeholder="당신의 회사 또는 이름을 적어주세요.">
-								</div>
-								<div class="inputInner">
-									<label for="email">Email</label>
-									<input type="email" name="email" id="mail" maxlength="30" placeholder="이메일 형식을 준수해 적어주세요.">
-								</div>
-								<div class="inputInner">
-									<label for="message">Messages</label>
-									<textarea name="message" id="message" cols="30" rows="10" placeholder="저에게 전할 메세지를 보내주세요."></textarea>
-								</div>
-								<div class="send_btn">
-									<button type="submit">Send Request <i class="far fa-paper-plane"></i></button>
-								</div>
-							</fieldset>
-						</form>
-					</div>
-				</div>
-			</article>
-		</main>
+      <footer id="footer">
+        <div class="container">
+          <div class="thanks">
+            <div class="thanks-inner">
+              <span class="thanks-title">Img</span>
+              <a href="https://kr.freepik.com/" target="_blank">Freepik</a>
+            </div>
+            <div class="thanks-inner">
+              <span class="thanks-title">Script</span>
+              <a href="https://jquery.com" target="_blank">jQuery</a>
+              <a href="https://swiperjs.com" target="_blank">Swiper</a>
+            </div>
+            <div class="thanks-inner">
+              <span class="thanks-title">Icon</span>
+              <a href="https://fontawesome.com" target="_blank"
+                >Font Awesome5</a
+              >
+              <a href="https://www.flaticon.com/kr" target="_blank">Flaticon</a>
+            </div>
+            <div class="thanks-inner">
+              <span class="thanks-title">API</span>
+              <a href="https://randomuser.me/" target="_blank"
+                >Random User Generator</a
+              >
+              <a
+                href="https://developers.naver.com/docs/common/openapiguide/"
+                target="_blank"
+                >Naver Developers</a
+              >
+            </div>
+          </div>
 
-		<footer id="footer">
-			<div class="container">
-				<div class="thanks">
-					<div class="thanks-inner">
-						<span class="thanks-title">Img</span>
-						<a href="https://kr.freepik.com/" target="_blank">Freepik</a>
-					</div>
-					<div class="thanks-inner">
-						<span class="thanks-title">Script</span>
-						<a href="https://jquery.com" target="_blank">jQuery</a>
-						<a href="https://swiperjs.com" target="_blank">Swiper</a>
-					</div>
-					<div class="thanks-inner">
-						<span class="thanks-title">Icon</span>
-						<a href="https://fontawesome.com" target="_blank">Font Awesome5</a>
-						<a href="https://www.flaticon.com/kr" target="_blank">Flaticon</a>
-					</div>
-					<div class="thanks-inner">
-						<span class="thanks-title">API</span>
-						<a href="https://randomuser.me/" target="_blank">Random User Generator</a>
-						<a href="https://developers.naver.com/docs/common/openapiguide/" target="_blank">Naver Developers</a>
-					</div>
-				</div>
+          <div class="copyright">ⓒ 2021 <strong>Areum Yang</strong></div>
+        </div>
+      </footer>
 
-				<div class="copyright">ⓒ 2021 <strong>Areum Yang</strong></div>
+      <ul class="link-connection">
+        <li><a class="github" href="https://github.com/yangareum1818"></a></li>
+        <li><a class="velog" href="https://velog.io/@yangareum1818"></a></li>
+      </ul>
+    </div>
 
-			</div>
-		</footer>
+    <script src="./assets/js/jquery-3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-		<ul class="link-connection">
-			<li><a class="github" href="https://github.com/yangareum1818"></a></li>
-			<li><a class="velog" href="https://velog.io/@yangareum1818"></a></li>
-		</ul>
-
-	</div>
-
-	<script src="./assets/js/jquery-3.6.0.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
-	<!-- js -->
-	<script src="./assets/js/core.js"></script>
-	<script src="./assets/js/tab-function.js"></script>
-</body>
+    <!-- js -->
+    <script src="./assets/js/core.js"></script>
+    <script src="./assets/js/tab-function.js"></script>
+  </body>
 </html>
