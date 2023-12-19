@@ -4,13 +4,11 @@
     height: 80px;
 
     .title {
-      padding: 25px;
+      padding: 25px 0;
     }
 
     .nav {
-      
       .navList {
-
         a {
           padding: 28px 0;
         }
@@ -34,7 +32,6 @@
 
   // main slide
   .sec-slider {
-    
     .swiper-slide {
       height: 100vh;
 
@@ -42,11 +39,8 @@
         height: 100vh;
 
         &.sec01 {
-
           .sec01-left {
-
             .sec01-img {
-
               &::before {
                 top: 30px;
                 left: 30px;
@@ -62,7 +56,6 @@
           }
 
           .sec01-right {
-
             .sec01-intro {
               font-size: 20px;
             }
@@ -70,9 +63,7 @@
         }
 
         &.sec02 {
-
           .sec02-left {
-
             .sect-subtitle {
               font-size: 30px;
               line-height: 1.2;
@@ -103,8 +94,10 @@
   }
 
   .sec-introduce {
-    .tabs {
+    padding-top: 80px;
+    padding-bottom: 0;
 
+    .tabs {
       .tabs-nav {
         top: -71px;
 
@@ -119,27 +112,26 @@
       }
 
       .tabs-content {
-
         .tab-common {
           padding: 22px;
 
           &.tab01 {
-
             .myBox {
-
+              .mybox-img {
+                strong {
+                  font-size: 28px;
+                }
+              }
               .mybox-item {
-
                 .intro-item {
-                  
                   .intro-tit {
                     font-size: 14px;
                   }
                 }
               }
             }
-            
-            .mybox-icon {
 
+            .mybox-icon {
               .intro-icon {
                 flex-direction: column;
                 justify-content: flex-start;
@@ -203,9 +195,7 @@
   }
 
   .sec-work {
-
     .thumbnailImg {
-
       .swiper-slide {
         height: 80px;
       }
@@ -220,7 +210,7 @@
 
       .swiper-slide {
         flex-direction: row-reverse;
-        
+
         .b-slide {
           width: 50%;
           height: 450px;
@@ -232,7 +222,7 @@
           margin-left: 0;
           margin-right: 10px;
           padding: 15px;
-				  width: calc(50% - 10px);
+          width: calc(50% - 10px);
           min-height: 450px;
 
           .work-tit {
@@ -251,7 +241,8 @@
                 padding-top: 0;
               }
 
-              .tit, .desc {
+              .tit,
+              .desc {
                 display: inline-block;
               }
 
@@ -288,9 +279,7 @@
   }
 
   .sec-contactus {
-
     .contact {
-
       .contact-vector {
         display: none;
       }
@@ -300,8 +289,8 @@
         width: 100%;
 
         .inputInner {
-
-          input, textarea {
+          input,
+          textarea {
             width: 100%;
           }
         }
@@ -311,6 +300,11 @@
 
           button {
             width: 100%;
+            background: #666;
+
+            &:hover {
+              background: #555;
+            }
           }
         }
       }
@@ -330,7 +324,6 @@
   }
 
   .sec-slider {
-
     .swiper-slide {
       height: 100vh;
 
@@ -346,14 +339,12 @@
           justify-content: space-evenly;
 
           .sec01-left {
-
             .sec01-img {
-
               &::before {
                 min-width: 390px;
               }
             }
-            
+
             .sec01-text {
               bottom: 56%;
               left: 68%;
@@ -388,39 +379,30 @@
   }
 
   .sec-introduce {
-
     .tabs {
-
       .tabs-nav {
         top: -64px;
       }
 
       .tabs-content {
-        
         .tab-common {
-          padding:  40px 20px;
+          padding: 40px 20px;
 
           &.tab01 {
-
             .myBox {
               flex-direction: column;
 
               .mybox-item {
-                display: flex;
-                flex-wrap: wrap;
+                padding: 0;
                 padding-top: 30px;
                 margin-top: 30px;
-                border-top: 1px solid #ddd;
+                margin-left: 0;
                 width: 100%;
+                border-left: 0;
+                border-top: 1px solid #ddd;
 
                 .intro-item {
-                  padding-top: 0;
-                  width: 50%;
                   text-align: center;
-
-                  &.email, &.address {
-                    padding-top: 20px;
-                  }
                 }
               }
             }
@@ -435,15 +417,15 @@
                   width: 40px;
                   height: 40px;
                 }
-                
+
                 p {
                   font-size: 13px;
                 }
 
-                &:nth-child(-n+2) {
+                &:nth-child(-n + 2) {
                   margin-bottom: 15px;
                 }
-                
+
                 &:nth-child(2n) {
                   margin-right: 0;
                 }
@@ -491,9 +473,7 @@
   }
 
   .sec-work {
-
     .thumbnailImg {
-
       .swiper-slide {
         height: 180px;
         background-position: 50% 20%;
@@ -505,7 +485,6 @@
     }
 
     .contentSlide {
-
       .swiper-slide {
         flex-direction: column;
 
@@ -530,10 +509,11 @@
                 padding-right: 0;
               }
 
-              .tit, .desc {
+              .tit,
+              .desc {
                 display: block;
               }
-              
+
               &:last-child {
                 margin-right: 0;
               }
@@ -557,7 +537,6 @@
 /* 세로모드 모바일 디바이스 (가로 해상도가 576px 보다 작은 화면에 적용) */
 @media (max-width: 575px) {
   #header {
-
     .nav {
       display: flex;
       flex-direction: column;
@@ -570,7 +549,7 @@
       background: #fff;
       border-left: 1px solid #ddd;
       transform: translateX(100%);
-		  transition: all .25s ease-in;
+      transition: all 0.25s ease-in;
 
       &.active {
         transform: translateX(0%);
@@ -598,12 +577,11 @@
 
       span {
         display: block;
-        background: #fff;
-        width: 24px; 
+        background: #555;
+        width: 24px;
         height: 2px;
-        border-radius: 3px;
-        transition: margin .25s .25s, transform .25s; 
-        
+        transition: margin 0.25s 0.25s, transform 0.25s;
+
         &.bar1 {
           margin-bottom: 8px;
         }
@@ -615,8 +593,8 @@
 
       &.active span {
         background-color: #555;
-        transition: margin .25s, transform 0.25s 0.25s;
-        
+        transition: margin 0.25s, transform 0.25s 0.25s;
+
         &.bar1 {
           margin-top: 10px;
           margin-bottom: -2px;
@@ -636,7 +614,6 @@
 
     &[data-header-theme="dark"] {
       .mobile-nav {
-
         span {
           background-color: #555;
         }
@@ -645,9 +622,7 @@
 
     &.fixed {
       .nav {
-
         .navList {
-
           a {
             padding: 0 23px 0 0;
           }
@@ -665,18 +640,13 @@
   }
 
   .sec-slider {
-
     .swiper-slide {
-
       .slideCont {
         height: 100vh;
 
         &.sec01 {
-
           .sec01-left {
-
             .sec01-img {
-
               &::before {
                 display: none;
               }
@@ -694,7 +664,6 @@
           padding-top: 60px;
 
           .sec02-left {
-
             .sect-subtitle {
               font-size: 24px;
             }
@@ -726,9 +695,7 @@
   }
 
   .sec-introduce {
-
     .tabs {
-
       .tabs-nav {
         top: -60px;
         right: 0;
@@ -742,12 +709,15 @@
           padding: 30px 15px;
 
           &.tab01 {
-
             .myBox {
+              .mybox-img {
+                .myPhoto {
+                  width: 100%;
+                }
 
-              .myPhoto {
-                width: 100px;
-                height: 100px;
+                strong {
+                  font-size: 20px;
+                }
               }
 
               .mybox-item {
@@ -758,7 +728,8 @@
                   padding-top: 10px;
                   width: 100%;
 
-                  &.email, &.address {
+                  &.email,
+                  &.address {
                     padding-top: 10px;
                   }
                 }
@@ -769,7 +740,6 @@
               padding-top: 20px;
 
               .intro-icon {
-
                 p {
                   font-size: 12px;
                 }
@@ -798,7 +768,6 @@
       }
       .tabs-content {
         .tab-common {
-
           &.active {
             min-height: auto;
           }
@@ -816,13 +785,10 @@
       }
     }
   }
-  
+
   .sec-work {
-
     .contentSlide {
-
       .swiper-slide {
-
         .work-cont {
           min-height: 0;
 
@@ -844,14 +810,11 @@
   }
 
   .sec-contactus {
-
     .contact {
-
       .form {
-
         .inputInner {
-
-          input, textarea {
+          input,
+          textarea {
             min-width: 320px;
           }
         }
