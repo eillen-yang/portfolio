@@ -1,6 +1,6 @@
 .link-connection {
   position: fixed;
-  bottom: 30px;
+  bottom: 40%;
   right: 30px;
   display: flex;
   align-items: center;
@@ -8,32 +8,32 @@
   flex-direction: column;
   width: 60px;
   height: 130px;
-  border-radius: 50px;
-  box-shadow: 0 0 20px #ddd;
-  background: #fff;
   z-index: 1;
 
-    li {
+  li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px #ddd;
+    background-color: #fff;
 
-      a {
-        display: block;
-        width: 50px;
-        height: 50px;
-        border-radius: 50px;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        background-size: contain;
-      }
-      .github {
-        background-image: url(../images/icon/github-mark.png);
-      }
-      .velog {
-        margin-top: 10px;
-        background-image: url(../images/icon/green-favicon.png);
-      }
+    a {
+      display: block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50px;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;
     }
+    .github {
+      background-image: url(../images/icon/github-mark.png);
+    }
+    .velog {
+      background-image: url(../images/icon/green-favicon.png);
+    }
+  }
 }
-
 
 /* 가로모드 모바일 디바이스 (가로 해상도가 768px 보다 작은 화면에 적용)  */
 @media (max-width: 767px) {
@@ -53,12 +53,11 @@
 /* 세로모드 모바일 디바이스 (가로 해상도가 576px 보다 작은 화면에 적용) */
 @media (max-width: 575px) {
   .link-connection {
-      bottom: 20px;
-      right: 20px;
-      width: 45px;
-      height: 90px;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 90px;
     li {
-
       a {
         width: 35px;
         height: 35px;
