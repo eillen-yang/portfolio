@@ -604,7 +604,16 @@
   }
 }
 
+.sec-experiencess {
+  .exp-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .sec-work {
+  display: none;
+
   .thumbnailImg {
     position: relative;
     overflow: hidden;
