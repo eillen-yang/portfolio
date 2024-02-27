@@ -125,7 +125,7 @@
   .title {
     padding-bottom: 40px;
     color: #000;
-    font-size: 34px;
+    font-size: 36px;
     font-weight: 700;
     letter-spacing: 10px;
     text-transform: uppercase;
@@ -605,9 +605,44 @@
 }
 
 .sec-experiencess {
-  .exp-container {
+  .exp_wrapper {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+    .exp_content {
+      padding: 20px;
+      display: flex;
+      justify-content: space-evenly;
+      min-height: 170px;
+      border: 1px solid #ccc;
+
+      .left {
+        flex: 1;
+
+        .exp_title {
+          display: block;
+          margin-bottom: 10px;
+          font-size: 32px;
+          font-weight: bold;
+        }
+
+        .exp_desc {
+          display: block;
+          font-size: 15px;
+          color: #333;
+        }
+      }
+      .right {
+        flex: 1;
+
+        li {
+          font-size: 16px;
+          color: #333;
+        }
+      }
+    }
   }
 }
 
